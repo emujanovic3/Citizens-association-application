@@ -65,8 +65,7 @@ public class LoginController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/glavni.fxml"));
             GlavniController ctrl = new GlavniController();
             loader.setController(ctrl);
-            Parent root = null;
-            root = loader.load();
+            Parent root = loader.load();
             stage.setTitle("Udruženje");
             stage.setScene(new Scene(root, USE_PREF_SIZE, USE_PREF_SIZE));
             stage.show();

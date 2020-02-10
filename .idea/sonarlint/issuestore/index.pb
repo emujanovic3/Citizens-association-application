@@ -25,3 +25,11 @@ N
 src/projekat/UdruzenjeDAO.java,7\5\75a0535593d69965b52abac349ac883eed977cb9
 Q
 !src/projekat/LoginController.java,3\8\388ba0ca7dadff67777f07a20be43b99122a90b7
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+S
+#src/projekat/PocetniController.java,1\8\18f54b847b954afa06b9bc76221f1fd1a084b073
+J
+src/projekat/Projekat.java,e\d\ed95ba2745ebb9b8a15f3b2fc825b91637bda310
+K
+resources/fxml/pocetni.fxml,1\b\1b65de53689f20475233e806185e97405a15117b

@@ -25,10 +25,6 @@ public class LoginController {
     public TextField sifraField;
 
     public LoginController() {
-        if(prviPut()){
-            zatvoriLogin();
-            otvoriPocetniProzor();
-        }
     }
 
     public void prijaviSeAction(ActionEvent actionEvent){
@@ -80,25 +76,5 @@ public class LoginController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    private boolean prviPut() {
-        Connection conn = null;
-        try {
-            conn = DriverManager.getConnection("jdbc:sqlite:baza.db");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            PreparedStatement dajSveClanoveUpit = conn.prepareStatement("SELECT * FROM clan;");
-        } catch (SQLException e) {
-            return true;
-        }
-        return false;
-    }
-
-    private void otvoriPocetniProzor() {
-
     }
 }

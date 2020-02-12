@@ -33,3 +33,7 @@ J
 src/projekat/Projekat.java,e\d\ed95ba2745ebb9b8a15f3b2fc825b91637bda310
 K
 resources/fxml/pocetni.fxml,1\b\1b65de53689f20475233e806185e97405a15117b
+H
+resources/fxml/clan.fxml,d\3\d3febee46c746eba22f8a2a7c883c894d6b17616
+P
+ src/projekat/ClanController.java,0\e\0edab3b765587224641dfb5575ece12400ea2c68

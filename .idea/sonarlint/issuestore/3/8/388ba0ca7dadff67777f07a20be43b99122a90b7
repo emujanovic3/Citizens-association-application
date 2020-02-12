@@ -1,15 +1,15 @@
 
 gsquid:UselessImportCheck"7Remove this unused import 'java.sql.PreparedStatement'.(òÄ™ƒÿÿÿÿÿ8ñÉèû‚.
-lsquid:S1192#"NDefine a constant instead of duplicating this literal "poljeIspravno" 4 times.(ş¤şĞ8§õÕ‚.
-]squid:UselessImportCheck"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8ñÉèû‚.
 Psquid:S1172"2Remove this unused method parameter "actionEvent".(²å±Ñ8¾ĞÛÖ‚.
-[squid:UselessImportCheck"0Remove this unused import 'java.sql.Connection'.(¥ËôÖ8ñÉèû‚.
 ^squid:UselessImportCheck"3Remove this unused import 'java.sql.DriverManager'.(“£°8ñÉèû‚.
 nsquid:S1192""PDefine a constant instead of duplicating this literal "poljeNeispravno" 4 times.(£½¸8¾ĞÛÖ‚.
-Fsquid:S1148M"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¾ĞÛÖ‚.
-Psquid:S1135"2Complete the task associated to this TODO comment.(ù»ş»8§õÕ‚.
-Psquid:S11729"2Remove this unused method parameter "actionEvent".( àÕæ8¾ĞÛÖ‚.
-Ysquid:UselessImportCheck".Remove this unused import 'javafx.scene.Node'.(ÑÖ¬ï8§õÕ‚.
 “"squid:ClassVariableVisibilityCheck"^Make korisnickoImeField a static final constant or non-public and provide accessors if needed.(²Îá³8§õÕ‚.
-Š"squid:ClassVariableVisibilityCheck"VMake sifraField a static final constant or non-public and provide accessors if needed.(å¾N8§õÕ‚.
 ¤squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦¯ÇÑÿÿÿÿÿ8·¸÷û‚.
+lsquid:S1192#"NDefine a constant instead of duplicating this literal "poljeIspravno" 4 times.(ş¤şĞ8§õÕ‚.
+Š"squid:ClassVariableVisibilityCheck"VMake sifraField a static final constant or non-public and provide accessors if needed.(å¾N8§õÕ‚.
+Psquid:S11729"2Remove this unused method parameter "actionEvent".( àÕæ8¾ĞÛÖ‚.
+Psquid:S1135"2Complete the task associated to this TODO comment.(ù»ş»8§õÕ‚.
+]squid:UselessImportCheck"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8ñÉèû‚.
+Fsquid:S1148M"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¾ĞÛÖ‚.
+[squid:UselessImportCheck"0Remove this unused import 'java.sql.Connection'.(¥ËôÖ8ñÉèû‚.
+Ysquid:UselessImportCheck".Remove this unused import 'javafx.scene.Node'.(ÑÖ¬ï8§õÕ‚.

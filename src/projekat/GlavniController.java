@@ -83,6 +83,21 @@ public class GlavniController {
         }
     }
 
+    public void skupstinaAction(ActionEvent actionEvent){
+        try {
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/skupstina.fxml"));
+            SkupstinaController ctrl = new SkupstinaController();
+            loader.setController(ctrl);
+            Parent root = loader.load();
+            stage.setTitle("Skupština");
+            stage.setScene(new Scene(root, USE_PREF_SIZE, USE_PREF_SIZE));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private String ucitajNaziv(){
         Scanner ulaz;
         try {

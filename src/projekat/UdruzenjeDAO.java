@@ -12,7 +12,7 @@ public class UdruzenjeDAO {
     private static UdruzenjeDAO instance;
     private Connection conn;
 
-    private PreparedStatement dajSveClanoveUpit, dodajClanaUpit, obrisiClanaUpit;
+    private PreparedStatement dajSveClanoveUpit, dodajClanaUpit, obrisiClanaUpit, dajSkupstinuUpit;
 
     public static UdruzenjeDAO getInstance(){
         if(instance==null){
@@ -43,6 +43,7 @@ public class UdruzenjeDAO {
         try {
             dodajClanaUpit = conn.prepareStatement("INSERT INTO clan VALUES(?,?,?,?,?,?,?,?,?,?);");
             obrisiClanaUpit = conn.prepareStatement("DELETE FROM clan WHERE id=?;");
+            dajSkupstinuUpit = conn.prepareStatement("SELECT * FROM clan WHERE skupstina=1;");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -113,6 +114,21 @@ public class UdruzenjeDAO {
         }
 
         return clanovi;
+    }
+
+    public ArrayList<Clan> dajSkupstinu(){
+        ArrayList<Clan> skupstina = new ArrayList<>();
+        try {
+            ResultSet rs = dajSkupstinuUpit.executeQuery();
+            while(rs.next()){
+                Clan s = dajClanaIzResultSeta(rs);
+                skupstina.add(s);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return skupstina;
     }
 
     private Clan dajClanaIzResultSeta(ResultSet rs) {

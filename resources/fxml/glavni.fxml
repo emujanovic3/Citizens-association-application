@@ -39,8 +39,9 @@
             </TableView>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Button mnemonicParsing="false" onAction="#dodajClanaAction" text="Dodaj člana" />
-                  <Button mnemonicParsing="false" onAction="#obrisiClanaAction" text="Obriši člana" />
+                  <Button mnemonicParsing="false" onAction="#dodajClanaAction" prefWidth="100.0" text="Dodaj člana" />
+                  <Button mnemonicParsing="false" onAction="#obrisiClanaAction" prefWidth="100.0" text="Obriši člana" />
+                  <Button mnemonicParsing="false" onAction="#skupstinaAction" prefWidth="100.0" text="Skupština" />
                </children>
             </VBox>
          </children>

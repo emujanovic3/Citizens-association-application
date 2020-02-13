@@ -75,4 +75,9 @@ public class Clan {
     public void setDrzavljanstvo(Drzavljanstvo drzavljanstvo) {
         this.drzavljanstvo = drzavljanstvo;
     }
+
+    @Override
+    public String toString() {
+        return getIme() + " " + getPrezime();
+    }
 }

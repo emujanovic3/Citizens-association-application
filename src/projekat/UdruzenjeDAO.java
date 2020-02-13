@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.sql.*;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UdruzenjeDAO {
@@ -95,6 +97,58 @@ public class UdruzenjeDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public ArrayList<Clan> dajSveClanove(){
+        ArrayList<Clan> clanovi = new ArrayList<>();
+        try {
+            ResultSet rs = dajSveClanoveUpit.executeQuery();
+            while(rs.next()){
+                Clan novi = dajClanaIzResultSeta(rs);
+                clanovi.add(novi);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return clanovi;
+    }
+
+    private Clan dajClanaIzResultSeta(ResultSet rs) {
+        Clan novi = null;
+        try {
+            if(rs.getInt(9)==1){
+                novi = new Predsjednik(rs.getInt(1),rs.getString(2),rs.getString(3),dajDatumIzResultSeta(rs.getString(4)),
+                        new Prebivaliste(rs.getString(5),rs.getString(6),rs.getString(7)),Drzavljanstvo.BIH);
+
+                if(rs.getString(8).equals("STRANO")){
+                    novi.setDrzavljanstvo(Drzavljanstvo.STRANO);
+                }
+            }else if(rs.getInt(10)==1){
+                novi = new Skupstina(rs.getInt(1),rs.getString(2),rs.getString(3),dajDatumIzResultSeta(rs.getString(4)),
+                        new Prebivaliste(rs.getString(5),rs.getString(6),rs.getString(7)),Drzavljanstvo.BIH);
+
+                if(rs.getString(8).equals("STRANO")){
+                    novi.setDrzavljanstvo(Drzavljanstvo.STRANO);
+                }
+            }else{
+                novi = new Clan(rs.getInt(1),rs.getString(2),rs.getString(3),dajDatumIzResultSeta(rs.getString(4)),
+                        new Prebivaliste(rs.getString(5),rs.getString(6),rs.getString(7)),Drzavljanstvo.BIH);
+
+                if(rs.getString(8).equals("STRANO")){
+                    novi.setDrzavljanstvo(Drzavljanstvo.STRANO);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return novi;
+    }
+
+    private LocalDate dajDatumIzResultSeta(String datum) {
+        String[] odvojeno = datum.split("-");
+        return LocalDate.of(Integer.parseInt(odvojeno[0]),Integer.parseInt(odvojeno[1]),Integer.parseInt(odvojeno[2]));
     }
 
     private void regenerisiBazu() {

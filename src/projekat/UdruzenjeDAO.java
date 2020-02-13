@@ -12,7 +12,7 @@ public class UdruzenjeDAO {
     private static UdruzenjeDAO instance;
     private Connection conn;
 
-    private PreparedStatement dajSveClanoveUpit, dodajClanaUpit;
+    private PreparedStatement dajSveClanoveUpit, dodajClanaUpit, obrisiClanaUpit;
 
     public static UdruzenjeDAO getInstance(){
         if(instance==null){
@@ -42,6 +42,7 @@ public class UdruzenjeDAO {
 
         try {
             dodajClanaUpit = conn.prepareStatement("INSERT INTO clan VALUES(?,?,?,?,?,?,?,?,?,?);");
+            obrisiClanaUpit = conn.prepareStatement("DELETE FROM clan WHERE id=?;");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -144,6 +145,15 @@ public class UdruzenjeDAO {
         }
 
         return novi;
+    }
+
+    public void obrisiClana(int id){
+        try {
+            obrisiClanaUpit.setInt(1,id);
+            obrisiClanaUpit.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     private LocalDate dajDatumIzResultSeta(String datum) {

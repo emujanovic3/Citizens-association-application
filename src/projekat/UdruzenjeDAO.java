@@ -10,7 +10,7 @@ public class UdruzenjeDAO {
     private static UdruzenjeDAO instance;
     private Connection conn;
 
-    private PreparedStatement dajSveClanoveUpit;
+    private PreparedStatement dajSveClanoveUpit, dodajClanaUpit;
 
     public static UdruzenjeDAO getInstance(){
         if(instance==null){
@@ -38,6 +38,11 @@ public class UdruzenjeDAO {
             }
         }
 
+        try {
+            dodajClanaUpit = conn.prepareStatement("INSERT INTO clan VALUES(?,?,?,?,?,?,?,?,?,?);");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void removeInstance(){
@@ -61,6 +66,35 @@ public class UdruzenjeDAO {
         File dbfile = new File("baza.db");
         dbfile.delete();
         UdruzenjeDAO dao = UdruzenjeDAO.getInstance();
+    }
+
+    public void dodajClana(Clan clan){
+        try {
+            dodajClanaUpit.setInt(1,clan.getId());
+            dodajClanaUpit.setString(2,clan.getIme());
+            dodajClanaUpit.setString(3,clan.getPrezime());
+            dodajClanaUpit.setString(4,clan.getDatumRodjenja().toString());
+            dodajClanaUpit.setString(5,clan.getPrebivaliste().getAdresa());
+            dodajClanaUpit.setString(6,clan.getPrebivaliste().getGrad());
+            dodajClanaUpit.setString(7,clan.getPrebivaliste().getDrzava());
+            dodajClanaUpit.setString(8,clan.getDrzavljanstvo().toString());
+
+            if(clan instanceof Predsjednik){
+                dodajClanaUpit.setInt(9,1);
+            }else{
+                dodajClanaUpit.setInt(9,0);
+            }
+
+            if(clan instanceof Skupstina){
+                dodajClanaUpit.setInt(10,1);
+            }else{
+                dodajClanaUpit.setInt(10,0);
+            }
+
+            dodajClanaUpit.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     private void regenerisiBazu() {

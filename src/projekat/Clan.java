@@ -19,6 +19,15 @@ public class Clan {
         this.drzavljanstvo = drzavljanstvo;
     }
 
+    public Clan(Clan clan) {
+        this.id = clan.getId();
+        this.ime = clan.getIme();
+        this.prezime = clan.getPrezime();
+        this.datumRodjenja = clan.getDatumRodjenja();
+        this.prebivaliste = clan.getPrebivaliste();
+        this.drzavljanstvo = clan.getDrzavljanstvo();
+    }
+
     public int getId() {
         return id;
     }

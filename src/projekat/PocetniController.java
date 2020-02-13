@@ -147,7 +147,7 @@ public class PocetniController {
                     for(Clan x : osnivaci){
                         LocalDate now = LocalDate.now();
 
-                        if(Period.between(now,x.getDatumRodjenja()).getYears()<18){
+                        if(Math.abs(Period.between(now,x.getDatumRodjenja()).getYears())<18){
                             throw new NeispravniOsnivaciException("Svi osnivači moraju imati najmanje 18 godina!");
                         }
 
@@ -179,7 +179,25 @@ public class PocetniController {
                         return;
                     }
 
+                    UdruzenjeDAO dao = UdruzenjeDAO.getInstance();
 
+                    for(int i=0;i<osnivaci.size();i++){
+                        if(i==0){
+                            Predsjednik p = new Predsjednik(osnivaci.get(i));
+                            dao.dodajClana(p);
+                        }else{
+                            Skupstina s = new Skupstina(osnivaci.get(i));
+                            dao.dodajClana(s);
+                        }
+                    }
+
+                    dao.removeInstance();
+
+                    otvoriGlavniProzor();
+
+                    Node n = (Node) actionEvent.getSource();
+                    Stage stage = (Stage) n.getScene().getWindow();
+                    stage.close();
                 } catch (NeispravniOsnivaciException e) {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Greška");
@@ -197,5 +215,20 @@ public class PocetniController {
         Stage stage = (Stage) n.getScene().getWindow();
         stage.close();
 
+    }
+
+    private void otvoriGlavniProzor() {
+        try {
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/glavni.fxml"));
+            GlavniController ctrl = new GlavniController();
+            loader.setController(ctrl);
+            Parent root = loader.load();
+            stage.setTitle("Udruženje");
+            stage.setScene(new Scene(root, USE_PREF_SIZE, USE_PREF_SIZE));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

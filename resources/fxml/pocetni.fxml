@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="470.0" vgap="10.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
-  <columnConstraints>
+    <stylesheets>
+        <URL value="@/css/login.css" />
+    </stylesheets>
+    <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -16,6 +20,8 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -23,30 +29,34 @@
    <children>
       <Label text="Naziv:" />
       <Label text="Osnivači:" GridPane.rowIndex="1" />
-      <TableView fx:id="osnivaciTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
-        <columns>
-          <TableColumn fx:id="imeColumn" prefWidth="75.0" text="Ime" />
-          <TableColumn fx:id="prezimeColumn" prefWidth="75.0" text="Prezime" />
-            <TableColumn fx:id="datumRodjenjaColumn" prefWidth="150.0" text="Datum rođenja" />
-            <TableColumn fx:id="drzavljanstvoColumn" prefWidth="150.0" text="Državljanstvo" />
-        </columns>
-      </TableView>
-      <ButtonBar GridPane.columnIndex="1" GridPane.rowIndex="1">
-         <buttons>
-            <Button mnemonicParsing="false" onAction="#dodajOsnivacaAction" text="Dodaj osnivača" />
-            <Button mnemonicParsing="false" onAction="#brisiOsnivacaAction" text="Briši osnivača" />
-         </buttons>
-      </ButtonBar>
       <Label text="Sjedište:" GridPane.rowIndex="3" />
       <Label text="Adresa:" GridPane.rowIndex="4" />
-      <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="5">
-        <buttons>
-          <Button mnemonicParsing="false" text="Napravi udruženje" />
-            <Button mnemonicParsing="false" onAction="#odustaniPocetniAction" text="Odustani" />
-        </buttons>
-      </ButtonBar>
-      <TextField GridPane.columnIndex="1" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <TextField fx:id="nazivField" GridPane.columnIndex="1" />
+       <ButtonBar GridPane.columnIndex="1" GridPane.rowIndex="1">
+           <buttons>
+               <Button maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#dodajOsnivacaAction" prefWidth="110.0" text="Dodaj osnivača" />
+               <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#brisiOsnivacaAction" text="Briši osnivača" />
+           </buttons>
+       </ButtonBar>
+       <TableView fx:id="osnivaciTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+           <columns>
+               <TableColumn fx:id="imeColumn" prefWidth="75.0" text="Ime" />
+               <TableColumn fx:id="prezimeColumn" prefWidth="75.0" text="Prezime" />
+               <TableColumn fx:id="datumRodjenjaColumn" prefWidth="150.0" text="Datum rođenja" />
+               <TableColumn fx:id="drzavljanstvoColumn" prefWidth="150.0" text="Državljanstvo" />
+           </columns>
+       </TableView>
+      <TextField fx:id="sjedisteField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextField fx:id="adresaField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Label text="Korisničko ime:" GridPane.rowIndex="5" />
+      <Label text="Šifra:" GridPane.rowIndex="6" />
+      <TextField fx:id="kImeField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <PasswordField fx:id="sifraField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+       <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="7">
+           <buttons>
+               <Button mnemonicParsing="false" onAction="#napraviAction" text="Napravi udruženje" />
+               <Button mnemonicParsing="false" onAction="#odustaniPocetniAction" text="Odustani" />
+           </buttons>
+       </ButtonBar>
    </children>
 </GridPane>

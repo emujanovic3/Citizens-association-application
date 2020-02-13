@@ -17,6 +17,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.Scanner;
@@ -29,6 +31,12 @@ public class PocetniController {
     public TableColumn<Clan,String> prezimeColumn;
     public TableColumn<Clan,String> datumRodjenjaColumn;
     public TableColumn<Clan,String> drzavljanstvoColumn;
+
+    public TextField nazivField;
+    public TextField sjedisteField;
+    public TextField adresaField;
+    public TextField kImeField;
+    public TextField sifraField;
 
     private ArrayList<Clan> osnivaci = new ArrayList<>();
 
@@ -79,6 +87,89 @@ public class PocetniController {
                 osnivaciTableView.getItems().remove(zaBrisanje);
                 osnivaci.remove(zaBrisanje);
             }
+        }
+    }
+
+    public void napraviAction(ActionEvent actionEvent){
+        boolean sveOk = true;
+
+        if(!(nazivField.getText().isEmpty())){;
+            nazivField.getStyleClass().removeAll("poljeNeispravno");
+            nazivField.getStyleClass().add("poljeIspravno");
+        }else {
+            nazivField.getStyleClass().removeAll("poljeIspravno");
+            nazivField.getStyleClass().add("poljeNeispravno");
+            sveOk = false;
+        }
+
+        if(!(sjedisteField.getText().isEmpty())){;
+            sjedisteField.getStyleClass().removeAll("poljeNeispravno");
+            sjedisteField.getStyleClass().add("poljeIspravno");
+        }else {
+            sjedisteField.getStyleClass().removeAll("poljeIspravno");
+            sjedisteField.getStyleClass().add("poljeNeispravno");
+            sveOk = false;
+        }
+
+        if(!(adresaField.getText().isEmpty())){;
+            adresaField.getStyleClass().removeAll("poljeNeispravno");
+            adresaField.getStyleClass().add("poljeIspravno");
+        }else {
+            adresaField.getStyleClass().removeAll("poljeIspravno");
+            adresaField.getStyleClass().add("poljeNeispravno");
+            sveOk = false;
+        }
+
+        if(!(kImeField.getText().isEmpty())){;
+            kImeField.getStyleClass().removeAll("poljeNeispravno");
+            kImeField.getStyleClass().add("poljeIspravno");
+        }else {
+            kImeField.getStyleClass().removeAll("poljeIspravno");
+            kImeField.getStyleClass().add("poljeNeispravno");
+            sveOk = false;
+        }
+
+        if(!(sifraField.getText().isEmpty())){;
+            sifraField.getStyleClass().removeAll("poljeNeispravno");
+            sifraField.getStyleClass().add("poljeIspravno");
+        }else {
+            sifraField.getStyleClass().removeAll("poljeIspravno");
+            sifraField.getStyleClass().add("poljeNeispravno");
+            sveOk = false;
+        }
+
+        if(sveOk){
+
+                try {
+                    if(osnivaci.size()<3) {
+                        throw new NeispravniOsnivaciException("Potrebna su najmanje 3 osnivača!");
+                    }
+
+                    boolean baremJedanBIH = false;
+
+                    for(Clan x : osnivaci){
+                        LocalDate now = LocalDate.now();
+
+                        if(Period.between(now,x.getDatumRodjenja()).getYears()<18){
+                            throw new NeispravniOsnivaciException("Svi osnivači moraju imati najmanje 18 godina!");
+                        }
+
+                        if(x.getDrzavljanstvo().equals(Drzavljanstvo.BIH)){
+                            baremJedanBIH = true;
+                        }
+                    }
+
+                    if(baremJedanBIH==false){
+                        throw new NeispravniOsnivaciException("Barem jedan osnivač mora imati državljanstvo BIH!");
+                    }
+                } catch (NeispravniOsnivaciException e) {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Greška");
+                    alert.setHeaderText("Došlo je do greške!");
+                    alert.setContentText(e.getMessage());
+
+                    alert.showAndWait();
+                }
         }
     }
 

@@ -35,7 +35,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         if(prviPut()){
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pocetni.fxml"));
-            LoginController ctrl = new LoginController();
+            PocetniController ctrl = new PocetniController();
             loader.setController(ctrl);
             Parent root = loader.load();
             primaryStage.setTitle("Start");

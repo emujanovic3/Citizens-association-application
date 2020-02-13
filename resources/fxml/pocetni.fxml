@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="450.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal">
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="470.0" vgap="10.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -23,21 +23,21 @@
    <children>
       <Label text="Naziv:" />
       <Label text="Osnivači:" GridPane.rowIndex="1" />
-      <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+      <TableView fx:id="osnivaciTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
         <columns>
-          <TableColumn prefWidth="75.0" text="Ime" />
-          <TableColumn prefWidth="75.0" text="Prezime" />
-            <TableColumn prefWidth="150.0" text="Datum rođenja" />
-            <TableColumn prefWidth="150.0" text="Državljanstvo" />
+          <TableColumn fx:id="imeColumn" prefWidth="75.0" text="Ime" />
+          <TableColumn fx:id="prezimeColumn" prefWidth="75.0" text="Prezime" />
+            <TableColumn fx:id="datumRodjenjaColumn" prefWidth="150.0" text="Datum rođenja" />
+            <TableColumn fx:id="drzavljanstvoColumn" prefWidth="150.0" text="Državljanstvo" />
         </columns>
       </TableView>
-      <Button mnemonicParsing="false" text="Dodaj osnivača" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" onAction="#dodajOsnivacaAction" text="Dodaj osnivača" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Label text="Sjedište:" GridPane.rowIndex="3" />
       <Label text="Adresa:" GridPane.rowIndex="4" />
       <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="5">
         <buttons>
           <Button mnemonicParsing="false" text="Napravi udruženje" />
-            <Button mnemonicParsing="false" text="Odustani" />
+            <Button mnemonicParsing="false" onAction="#odustaniPocetniAction" text="Odustani" />
         </buttons>
       </ButtonBar>
       <TextField GridPane.columnIndex="1" />

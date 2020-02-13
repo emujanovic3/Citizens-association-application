@@ -17,18 +17,18 @@ public class ClanController {
     public TextField adresaClanField;
     public TextField gradClanField;
     public TextField drzavaClanField;
-    public RadioButton bihRadioBtn;
-    public RadioButton drugoRadioBtn;
+    public RadioButton bihClanRadioBtn;
+    public RadioButton drugoClanRadioBtn;
 
     private ToggleGroup grupa = new ToggleGroup();
     private Clan novi = null;
 
     @FXML
     public void initialize(){
-        bihRadioBtn.setToggleGroup(grupa);
-        drugoRadioBtn.setToggleGroup(grupa);
+        bihClanRadioBtn.setToggleGroup(grupa);
+        drugoClanRadioBtn.setToggleGroup(grupa);
 
-        bihRadioBtn.setSelected(true);
+        bihClanRadioBtn.setSelected(true);
     }
 
     public void dodajClanAction(ActionEvent actionEvent){

@@ -8,23 +8,45 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 import static javafx.scene.layout.Region.USE_PREF_SIZE;
 
 public class LoginController {
     //TODO negdje cuvati login informacije
-    private String korisnickoIme = "emir";
-    private String sifra = "test";
+    private String korisnickoIme;
+    private String sifra;
 
     public TextField korisnickoImeField;
     public TextField sifraField;
 
     public LoginController() {
+        Scanner ulaz;
+        try {
+            ulaz = new Scanner(new FileReader("osnivacki_akt.txt"));
+            String predzadnja = ulaz.nextLine();
+            String zadnja = ulaz.nextLine();
+
+            while(ulaz.hasNextLine()){
+                predzadnja = zadnja;
+                zadnja = ulaz.nextLine();
+            }
+
+            korisnickoIme = predzadnja;
+            sifra = zadnja;
+
+            ulaz.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Datoteka osnivacki_akt.txt ne postoji ili se ne može otvoriti");
+        }
+
     }
 
     public void prijaviSeAction(ActionEvent actionEvent){

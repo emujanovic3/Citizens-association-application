@@ -11,10 +11,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
@@ -162,6 +159,27 @@ public class PocetniController {
                     if(baremJedanBIH==false){
                         throw new NeispravniOsnivaciException("Barem jedan osnivač mora imati državljanstvo BIH!");
                     }
+
+                    PrintWriter izlaz;
+                    try {
+                        izlaz = new PrintWriter(new FileWriter("osnivacki_akt.txt"));
+                        izlaz.println(nazivField.getText());
+                        for(Clan x : osnivaci){
+                            izlaz.println(x.getIme() + " " + x.getPrezime() + " " + x.getDatumRodjenja()
+                             + " " + x.getPrebivaliste().getAdresa() + " " + x.getPrebivaliste().getGrad() + " "
+                             + x.getPrebivaliste().getDrzava() + " " + x.getDrzavljanstvo());
+                        }
+
+                        izlaz.println(sjedisteField.getText());
+                        izlaz.println(adresaField.getText());
+                        izlaz.println(kImeField.getText());
+                        izlaz.println(sifraField.getText());
+                    } catch (IOException e) {
+                        System.out.println("Datoteka osnivacki_akt.txt se ne može otvoriti");
+                        return;
+                    }
+
+
                 } catch (NeispravniOsnivaciException e) {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Greška");

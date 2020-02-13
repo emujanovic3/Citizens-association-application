@@ -7,9 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -20,6 +18,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.Scanner;
 
 import static javafx.scene.layout.Region.USE_PREF_SIZE;
@@ -63,6 +62,23 @@ public class PocetniController {
             });
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void brisiOsnivacaAction(ActionEvent actionEvent){
+        Clan zaBrisanje = osnivaciTableView.getSelectionModel().getSelectedItem();
+
+        if(zaBrisanje!=null){
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Potvrda brisanja osnivača:");
+            alert.setHeaderText("Obrisat ćete odabranog osnivača");
+            alert.setContentText("Da li ste sigurni?");
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == ButtonType.OK){
+                osnivaciTableView.getItems().remove(zaBrisanje);
+                osnivaci.remove(zaBrisanje);
+            }
         }
     }
 

@@ -71,5 +71,9 @@ public class PocetniController {
         Node n = (Node) actionEvent.getSource();
         Stage stage = (Stage) n.getScene().getWindow();
         stage.close();
+
+        //TODO moram popraviti brisanje fajla, i dodati username i password u pocetni fxml
+        File dbfile = new File("baza.db");
+        dbfile.delete();
     }
 }

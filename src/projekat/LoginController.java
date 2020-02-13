@@ -11,16 +11,13 @@ import javafx.stage.Stage;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+
 import java.util.Scanner;
 
 import static javafx.scene.layout.Region.USE_PREF_SIZE;
 
 public class LoginController {
-    //TODO negdje cuvati login informacije
+
     private String korisnickoIme;
     private String sifra;
 

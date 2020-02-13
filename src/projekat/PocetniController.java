@@ -174,6 +174,7 @@ public class PocetniController {
                         izlaz.println(adresaField.getText());
                         izlaz.println(kImeField.getText());
                         izlaz.println(sifraField.getText());
+                        izlaz.close();
                     } catch (IOException e) {
                         System.out.println("Datoteka osnivacki_akt.txt se ne može otvoriti");
                         return;

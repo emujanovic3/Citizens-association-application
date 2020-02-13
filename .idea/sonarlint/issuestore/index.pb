@@ -37,3 +37,11 @@ H
 resources/fxml/clan.fxml,d\3\d3febee46c746eba22f8a2a7c883c894d6b17616
 P
  src/projekat/ClanController.java,0\e\0edab3b765587224641dfb5575ece12400ea2c68
+]
+-src/projekat/NeispravniOsnivaciException.java,3\d\3db9c342b40224b5ebec01b3eab5ef9cadd7524d
+M
+src/projekat/Predsjednik.java,1\5\158b73ad70a74226deacf029911767c54ad1f4f8
+K
+src/projekat/Skupstina.java,d\f\dfaf1c043b7f4dec2092f654dc0782752460c81e
+A
+osnivacki_akt.txt,6\6\66cdaaec546e4c42a0657537426f6831df3d377b

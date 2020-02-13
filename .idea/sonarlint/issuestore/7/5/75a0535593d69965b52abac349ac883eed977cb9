@@ -1,16 +1,19 @@
 
+Fsquid:S1148,"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8š´Ğòƒ.
+Ssquid:S1068"5Remove this unused "dajSveClanoveUpit" private field.(¤ñÁ8òËÃÖ‚.
 Lsquid:S2115")Add password protection to this database.(–Æƒƒüÿÿÿÿ8Ï·ÉÖ‚.
-Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ï·ÉÖ‚.
+Ksquid:S1481D"(Remove this unused "dao" local variable.(Ç»¯€ıÿÿÿÿ8®İåßƒ.
+Fsquid:S1148`"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8•©Øòƒ.
+lsquid:S4042C"IUse "java.nio.Files#delete" here for better messages on error conditions.(Çì¥ğıÿÿÿÿ8®İåßƒ.
+Xsquid:S1141l"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ÊºŸŞƒ.
+Zsquid:S1854D"7Remove this useless assignment to local variable "dao".(Ç»¯€ıÿÿÿÿ8®İåßƒ.
+Fsquid:S1148q"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÊºŸŞƒ.
+Fsquid:S1148<"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¯ÚÇŞƒ.
+Fsquid:S1148w"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÊºŸŞƒ.
+?squid:S1643i"Use a StringBuilder instead.(¥…ˆÇşÿÿÿÿ8ÊºŸŞƒ.
 ]
-squid:S899>";Do something with the "boolean" value returned by "delete".(Çì¥ğıÿÿÿÿ8®İåßƒ.
-?squid:S1643G"Use a StringBuilder instead.(¥…ˆÇşÿÿÿÿ8ÊºŸŞƒ.
-Fsquid:S1148U"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÊºŸŞƒ.
-Fsquid:S11487"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¯ÚÇŞƒ.
-Zsquid:S1854?"7Remove this useless assignment to local variable "dao".(Ç»¯€ıÿÿÿÿ8®İåßƒ.
-Fsquid:S1148O"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÊºŸŞƒ.
-Ksquid:S1481?"(Remove this unused "dao" local variable.(Ç»¯€ıÿÿÿÿ8®İåßƒ.
-Xsquid:S1068"5Remove this unused "dajSveClanoveUpit" private field.(âÀ€õüÿÿÿÿ8òËÃÖ‚.
+squid:S899C";Do something with the "boolean" value returned by "delete".(Çì¥ğıÿÿÿÿ8®İåßƒ.
+Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ï·ÉÖ‚.
+jsquid:S2095m"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8ÊºŸŞƒ.
 Asquid:S1148%"#Use a logger to log this exception.(Ç’Çê8®û¡Şƒ.
-jsquid:S2095K"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8ÊºŸŞƒ.
-Xsquid:S1141J"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ÊºŸŞƒ.
-lsquid:S4042>"IUse "java.nio.Files#delete" here for better messages on error conditions.(Çì¥ğıÿÿÿÿ8®İåßƒ.
+Jsquid:S1659",Declare "dodajClanaUpit" on a separate line.(¤ñÁ8ğŸÉòƒ.

@@ -1,18 +1,17 @@
 
-Msquid:EmptyStatementUsageCheck@"Remove this empty statement.(±ıêÆ8®ù™İƒ.
-–"squid:ClassVariableVisibilityCheck"\Make prezimeClanField a static final constant or non-public and provide accessors if needed.(¢õµªşÿÿÿÿ8ú”çÜƒ.
-"squid:ClassVariableVisibilityCheck"[Make bihClanRadioBtn a static final constant or non-public and provide accessors if needed.(©Ğ×¤8äÎßßƒ.
-{squid:S1488v"]Immediately return this expression instead of assigning it to the temporary variable "datum".(åÀ‘¯8œÏ»İƒ.
-•"squid:ClassVariableVisibilityCheck"[Make adresaClanField a static final constant or non-public and provide accessors if needed.(…¥–ûÿÿÿÿ8ú”çÜƒ.
-"squid:ClassVariableVisibilityCheck"[Make drzavaClanField a static final constant or non-public and provide accessors if needed.(ğõû8ú”çÜƒ.
-Rsquid:EmptyStatementUsageCheck."Remove this empty statement.(ÏÍø‡şÿÿÿÿ8®ù™İƒ.
-“"squid:ClassVariableVisibilityCheck"YMake gradClanField a static final constant or non-public and provide accessors if needed.(ã™©ùÿÿÿÿ8ú”çÜƒ.
-Rsquid:EmptyStatementUsageCheck7"Remove this empty statement.(€„Íİüÿÿÿÿ8®ù™İƒ.
-Rsquid:EmptyStatementUsageCheckI"Remove this empty statement.(œ†ãèüÿÿÿÿ8®ù™İƒ.
-Rsquid:EmptyStatementUsageCheck%"Remove this empty statement.(³¢’úÿÿÿÿÿ8Æ‹İƒ.
-tsquid:S1192&"QDefine a constant instead of duplicating this literal "poljeNeispravno" 12 times.(Üİ‹åûÿÿÿÿ8’ºİƒ.
-Msquid:EmptyStatementUsageCheckR"Remove this empty statement.(À¤ï˜8®ù™İƒ.
-"squid:ClassVariableVisibilityCheck"XMake imeClanField a static final constant or non-public and provide accessors if needed.(„ÅØ‘8ú”çÜƒ.
-œ"squid:ClassVariableVisibilityCheck"bMake datumRodjenjaClanField a static final constant or non-public and provide accessors if needed.(„‰éğşÿÿÿÿ8ú”çÜƒ.
-—"squid:ClassVariableVisibilityCheck"]Make drugoClanRadioBtn a static final constant or non-public and provide accessors if needed.(¡ß’ïùÿÿÿÿ8äÎßßƒ.
-rsquid:S1192'"ODefine a constant instead of duplicating this literal "poljeIspravno" 12 times.(ñ¿Çêÿÿÿÿÿ8’ºİƒ.
+"squid:ClassVariableVisibilityCheck"XMake imeClanField a static final constant or non-public and provide accessors if needed.(„ÅØ‘8ú”çÜƒ.
+"squid:ClassVariableVisibilityCheck"[Make drzavaClanField a static final constant or non-public and provide accessors if needed.(ğõû8ú”çÜƒ.
+tsquid:S1192'"QDefine a constant instead of duplicating this literal "poljeNeispravno" 10 times.(Üİ‹åûÿÿÿÿ8’ºİƒ.
+"squid:ClassVariableVisibilityCheck"ZMake datePickerClan a static final constant or non-public and provide accessors if needed.(©äİ‹8“¿ïƒ.
+Msquid:EmptyStatementUsageCheck8"Remove this empty statement.(±ıêÆ8®ù™İƒ.
+Rsquid:EmptyStatementUsageCheckA"Remove this empty statement.(œ†ãèüÿÿÿÿ8®ù™İƒ.
+—"squid:ClassVariableVisibilityCheck"]Make drugoClanRadioBtn a static final constant or non-public and provide accessors if needed.(¡ß’ïùÿÿÿÿ8äÎßßƒ.
+•"squid:ClassVariableVisibilityCheck"[Make adresaClanField a static final constant or non-public and provide accessors if needed.(…¥–ûÿÿÿÿ8ú”çÜƒ.
+Rsquid:EmptyStatementUsageCheck&"Remove this empty statement.(³¢’úÿÿÿÿÿ8Æ‹İƒ.
+"squid:ClassVariableVisibilityCheck"[Make bihClanRadioBtn a static final constant or non-public and provide accessors if needed.(©Ğ×¤8äÎßßƒ.
+rsquid:S1192("ODefine a constant instead of duplicating this literal "poljeIspravno" 10 times.(ñ¿Çêÿÿÿÿÿ8’ºİƒ.
+`squid:UselessImportCheck"0Remove this unused import 'java.time.LocalDate'.(›‘¬èıÿÿÿÿ8ôâĞïƒ.
+Msquid:EmptyStatementUsageCheckJ"Remove this empty statement.(À¤ï˜8®ù™İƒ.
+Rsquid:EmptyStatementUsageCheck/"Remove this empty statement.(ÏÍø‡şÿÿÿÿ8®ù™İƒ.
+“"squid:ClassVariableVisibilityCheck"YMake gradClanField a static final constant or non-public and provide accessors if needed.(ã™©ùÿÿÿÿ8ú”çÜƒ.
+–"squid:ClassVariableVisibilityCheck"\Make prezimeClanField a static final constant or non-public and provide accessors if needed.(¢õµªşÿÿÿÿ8ú”çÜƒ.

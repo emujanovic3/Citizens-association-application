@@ -58,6 +58,7 @@ public class PocetniController {
                 if(novi!=null){
                     novi.setId(osnivaci.size()+1);
                     osnivaci.add(novi);
+                    osnivaciTableView.setItems(FXCollections.observableArrayList(osnivaci));
                 }
             });
         } catch (IOException e) {
@@ -70,8 +71,6 @@ public class PocetniController {
         Node n = (Node) actionEvent.getSource();
         Stage stage = (Stage) n.getScene().getWindow();
         stage.close();
-
-        //TODO moram popraviti brisanje fajla, i dodati username i password u pocetni fxml
 
     }
 }

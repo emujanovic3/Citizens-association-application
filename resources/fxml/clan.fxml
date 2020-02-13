@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<?import java.net.URL?>
 <GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" vgap="10.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
     <stylesheets>
         <URL value="@/css/login.css" />
@@ -32,14 +32,14 @@
       <Label text="Grad:" GridPane.rowIndex="4" />
       <Label text="Država:" GridPane.rowIndex="5" />
       <Label text="Državljanstvo:" GridPane.rowIndex="6" />
-      <RadioButton fx:id="bihClanRadioBtn" mnemonicParsing="false" text="BIH" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-      <RadioButton fx:id="drugoClanRadioBtn" mnemonicParsing="false" text="Drugo" GridPane.columnIndex="2" GridPane.rowIndex="6" />
       <TextField fx:id="imeClanField" GridPane.columnIndex="1" GridPane.columnSpan="2" />
       <TextField fx:id="prezimeClanField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-      <TextField fx:id="datumRodjenjaClanField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+       <DatePicker fx:id="datePickerClan" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" />
       <TextField fx:id="adresaClanField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
       <TextField fx:id="gradClanField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
       <TextField fx:id="drzavaClanField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+       <RadioButton fx:id="bihClanRadioBtn" mnemonicParsing="false" text="BIH" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+       <RadioButton fx:id="drugoClanRadioBtn" mnemonicParsing="false" text="Drugo" GridPane.columnIndex="2" GridPane.rowIndex="6" />
       <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="7">
         <buttons>
           <Button mnemonicParsing="false" onAction="#dodajClanAction" text="Dodaj" />

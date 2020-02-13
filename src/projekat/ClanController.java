@@ -3,6 +3,7 @@ package projekat;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
@@ -13,7 +14,7 @@ import java.time.LocalDate;
 public class ClanController {
     public TextField imeClanField;
     public TextField prezimeClanField;
-    public TextField datumRodjenjaClanField;
+    public DatePicker datePickerClan;
     public TextField adresaClanField;
     public TextField gradClanField;
     public TextField drzavaClanField;
@@ -52,15 +53,6 @@ public class ClanController {
             sveOk = false;
         }
 
-        if(!(datumRodjenjaClanField.getText().isEmpty())){;
-            datumRodjenjaClanField.getStyleClass().removeAll("poljeNeispravno");
-            datumRodjenjaClanField.getStyleClass().add("poljeIspravno");
-        }else{
-            datumRodjenjaClanField.getStyleClass().removeAll("poljeIspravno");
-            datumRodjenjaClanField.getStyleClass().add("poljeNeispravno");
-            sveOk = false;
-        }
-
         if(!(adresaClanField.getText().isEmpty())){;
             adresaClanField.getStyleClass().removeAll("poljeNeispravno");
             adresaClanField.getStyleClass().add("poljeIspravno");
@@ -89,7 +81,7 @@ public class ClanController {
         }
 
         if(sveOk){
-            novi = new Clan(0, imeClanField.getText(),prezimeClanField.getText(),dajDatumIzTeksta(datumRodjenjaClanField.getText()),
+            novi = new Clan(0, imeClanField.getText(),prezimeClanField.getText(),datePickerClan.getValue(),
                     new Prebivaliste(adresaClanField.getText(),gradClanField.getText(),drzavaClanField.getText()),Drzavljanstvo.BIH);
 
             if(((RadioButton)grupa.getSelectedToggle()).getText().equals("Drugo")){
@@ -111,15 +103,5 @@ public class ClanController {
 
     public Clan getClan(){
         return novi;
-    }
-
-    private LocalDate dajDatumIzTeksta(String text){
-        String[] odvojeno = text.split(".");
-        System.out.println(text);
-        for(String x : odvojeno){
-            System.out.println(x);
-        }
-        LocalDate datum = LocalDate.of(Integer.parseInt(odvojeno[2]),Integer.parseInt(odvojeno[1]),Integer.parseInt(odvojeno[0]));
-        return datum;
     }
 }

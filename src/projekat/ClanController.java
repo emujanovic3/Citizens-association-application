@@ -115,6 +115,10 @@ public class ClanController {
 
     private LocalDate dajDatumIzTeksta(String text){
         String[] odvojeno = text.split(".");
+        System.out.println(text);
+        for(String x : odvojeno){
+            System.out.println(x);
+        }
         LocalDate datum = LocalDate.of(Integer.parseInt(odvojeno[2]),Integer.parseInt(odvojeno[1]),Integer.parseInt(odvojeno[0]));
         return datum;
     }

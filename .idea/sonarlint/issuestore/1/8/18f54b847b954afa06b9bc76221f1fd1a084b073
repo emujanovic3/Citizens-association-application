@@ -1,2 +1,20 @@
 
-^squid:S2094"BRemove this empty class, write its code or make it an "interface".(¿†Êìşÿÿÿÿ
+Psquid:S1172/"2Remove this unused method parameter "actionEvent".(æÁ«¦8ÆÆÃßƒ.
+lsquid:S4042M"IUse "java.nio.Files#delete" here for better messages on error conditions.(Çì¥ğıÿÿÿÿ8½‡àƒ.
+Psquid:S1135K"2Complete the task associated to this TODO comment.(ñ’â 8Âı±àƒ.
+^squid:UselessImportCheck".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ8¢”ŸŞƒ.
+"squid:ClassVariableVisibilityCheck"YMake prezimeColumn a static final constant or non-public and provide accessors if needed.(ïØÿ8Ù¹Şƒ.
+’"squid:ClassVariableVisibilityCheck"]Make osnivaciTableView a static final constant or non-public and provide accessors if needed.(Ö—¦8ù¹·Şƒ.
+]
+squid:S899M";Do something with the "boolean" value returned by "delete".(Çì¥ğıÿÿÿÿ8½‡àƒ.
+Zsquid:UselessImportCheck"/Remove this unused import 'java.sql.Statement'.(ÏÖÔø8¢”ŸŞƒ.
+Zsquid:S1854&"7Remove this useless assignment to local variable "dao".(Ç»¯€ıÿÿÿÿ8ıó¿ßƒ.
+]squid:UselessImportCheck"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8¢”ŸŞƒ.
+Qsquid:S16119"3Remove the parentheses around the "event" parameter(Ú‹”à8ÆÆÃßƒ.
+Fsquid:S1148A"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÆÆÃßƒ.
+jsquid:UselessImportCheck":Remove this unused import 'java.io.FileNotFoundException'.(·î™ùÿÿÿÿ8¢”ŸŞƒ.
+”"squid:ClassVariableVisibilityCheck"_Make datumRodjenjaColumn a static final constant or non-public and provide accessors if needed.(å‘ñª8Ù¹Şƒ.
+”"squid:ClassVariableVisibilityCheck "_Make drzavljanstvoColumn a static final constant or non-public and provide accessors if needed.(Ûá·ú8‚´ºŞƒ.
+Ksquid:S1481&"(Remove this unused "dao" local variable.(Ç»¯€ıÿÿÿÿ8ıó¿ßƒ.
+Š"squid:ClassVariableVisibilityCheck"UMake imeColumn a static final constant or non-public and provide accessors if needed.(âÙıñ8Ù¹Şƒ.
+_squid:UselessImportCheck"4Remove this unused import 'java.io.FileInputStream'.(˜³ÉÓ8¢”ŸŞƒ.

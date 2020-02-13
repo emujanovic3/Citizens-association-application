@@ -35,7 +35,6 @@ public class PocetniController {
 
     @FXML
     public void initialize(){
-        UdruzenjeDAO dao = UdruzenjeDAO.getInstance();
         imeColumn.setCellValueFactory(new PropertyValueFactory<>("Ime"));
         prezimeColumn.setCellValueFactory(new PropertyValueFactory<>("Prezime"));
         datumRodjenjaColumn.setCellValueFactory(new PropertyValueFactory<>("DatumRodjenja"));
@@ -73,7 +72,6 @@ public class PocetniController {
         stage.close();
 
         //TODO moram popraviti brisanje fajla, i dodati username i password u pocetni fxml
-        File dbfile = new File("baza.db");
-        dbfile.delete();
+
     }
 }

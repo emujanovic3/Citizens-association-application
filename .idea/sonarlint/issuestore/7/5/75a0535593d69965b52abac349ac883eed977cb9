@@ -1,5 +1,16 @@
 
-Xsquid:S1068"5Remove this unused "dajSveClanoveUpit" private field.(âÀ€õüÿÿÿÿ8òËÃÖ‚.
-Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ÿÞËÖ‚.
-Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ï·ÉÖ‚.
-Lsquid:S2115")Add password protection to this database.(–Æƒƒüÿÿÿÿ8Ï·ÉÖ‚.
+Lsquid:S2115")Add password protection to this database.(–Æƒƒüÿÿÿÿ8Ï·ÉÖ‚.
+Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ï·ÉÖ‚.
+]
+squid:S899>";Do something with the "boolean" value returned by "delete".(Çì¥ðýÿÿÿÿ8®Ýåßƒ.
+?squid:S1643G"Use a StringBuilder instead.(¥…ˆÇþÿÿÿÿ8ÊºŸÞƒ.
+Fsquid:S1148U"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ÊºŸÞƒ.
+Fsquid:S11487"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8¯ÚÇÞƒ.
+Zsquid:S1854?"7Remove this useless assignment to local variable "dao".(Ç»¯€ýÿÿÿÿ8®Ýåßƒ.
+Fsquid:S1148O"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ÊºŸÞƒ.
+Ksquid:S1481?"(Remove this unused "dao" local variable.(Ç»¯€ýÿÿÿÿ8®Ýåßƒ.
+Xsquid:S1068"5Remove this unused "dajSveClanoveUpit" private field.(âÀ€õüÿÿÿÿ8òËÃÖ‚.
+Asquid:S1148%"#Use a logger to log this exception.(Ç’Çê8®û¡Þƒ.
+jsquid:S2095K"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8ÊºŸÞƒ.
+Xsquid:S1141J"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ÊºŸÞƒ.
+lsquid:S4042>"IUse "java.nio.Files#delete" here for better messages on error conditions.(Çì¥ðýÿÿÿÿ8®Ýåßƒ.

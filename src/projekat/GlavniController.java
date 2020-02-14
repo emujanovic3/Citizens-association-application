@@ -23,6 +23,7 @@ import static javafx.scene.layout.Region.USE_PREF_SIZE;
 
 public class GlavniController {
     public Label nazivLabel;
+    public Label imePredsjednika;
     public TableView<Clan> clanoviTableView;
     public TableColumn<Clan,String> imeCol;
     public TableColumn<Clan,String> prezimeCol;
@@ -38,6 +39,12 @@ public class GlavniController {
     @FXML
     public void initialize(){
         nazivLabel.setText("\"" + naziv +"\"");
+        for(Clan x: clanovi){
+            if(x instanceof Predsjednik){
+                imePredsjednika.setText(x.getIme() + " " + x.getPrezime());
+                break;
+            }
+        }
         imeCol.setCellValueFactory(new PropertyValueFactory<>("Ime"));
         prezimeCol.setCellValueFactory(new PropertyValueFactory<>("Prezime"));
         clanoviTableView.setItems(clanovi);
@@ -212,6 +219,8 @@ public class GlavniController {
             clanovi.remove(result.get());
             clanovi.add(noviP);
             dao.promijeniClana(noviP);
+
+            imePredsjednika.setText(noviP.getIme() + " " + noviP.getPrezime());
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Obavještenje");

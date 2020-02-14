@@ -12,7 +12,7 @@ public class UdruzenjeDAO {
     private static UdruzenjeDAO instance;
     private Connection conn;
 
-    private PreparedStatement dajSveClanoveUpit, dodajClanaUpit, obrisiClanaUpit, dajSkupstinuUpit;
+    private PreparedStatement dajSveClanoveUpit, dodajClanaUpit, obrisiClanaUpit, dajSkupstinuUpit, promijeniClanaUpit;
 
     public static UdruzenjeDAO getInstance(){
         if(instance==null){
@@ -44,6 +44,8 @@ public class UdruzenjeDAO {
             dodajClanaUpit = conn.prepareStatement("INSERT INTO clan VALUES(?,?,?,?,?,?,?,?,?,?);");
             obrisiClanaUpit = conn.prepareStatement("DELETE FROM clan WHERE id=?;");
             dajSkupstinuUpit = conn.prepareStatement("SELECT * FROM clan WHERE skupstina=1;");
+            promijeniClanaUpit = conn.prepareStatement("UPDATE clan SET ime=?, prezime=?, datum_rodjenja=?, adresa_stanovanja=?, " +
+                    "grad=?, drzava=?, drzavljanstvo=?, predsjednik=?, skupstina=? WHERE id=?;");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -129,6 +131,36 @@ public class UdruzenjeDAO {
         }
 
         return skupstina;
+    }
+
+    public void promijeniClana(Clan clan){
+        try {
+            promijeniClanaUpit.setString(1,clan.getIme());
+            promijeniClanaUpit.setString(2,clan.getPrezime());
+            promijeniClanaUpit.setString(3,clan.getDatumRodjenja().toString());
+            promijeniClanaUpit.setString(4,clan.getPrebivaliste().getAdresa());
+            promijeniClanaUpit.setString(5,clan.getPrebivaliste().getGrad());
+            promijeniClanaUpit.setString(6,clan.getPrebivaliste().getDrzava());
+            promijeniClanaUpit.setString(7,clan.getDrzavljanstvo().toString());
+
+            if(clan instanceof Predsjednik){
+                promijeniClanaUpit.setInt(8,1);
+            }else{
+                promijeniClanaUpit.setInt(8,0);
+            }
+
+            if(clan instanceof Skupstina){
+                promijeniClanaUpit.setInt(9,1);
+            }else{
+                promijeniClanaUpit.setInt(9,0);
+            }
+
+            promijeniClanaUpit.setInt(10,clan.getId());
+
+            promijeniClanaUpit.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     private Clan dajClanaIzResultSeta(ResultSet rs) {

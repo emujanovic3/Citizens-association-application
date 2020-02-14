@@ -98,6 +98,88 @@ public class GlavniController {
         }
     }
 
+    public void dodajSkupstinaAction(ActionEvent actionEvent){
+        Clan clan = clanoviTableView.getSelectionModel().getSelectedItem();
+
+        if(clan instanceof Predsjednik){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Obavještenje");
+            alert.setHeaderText(null);
+            alert.setContentText("Izabrana osoba je predsjednik!");
+
+            alert.showAndWait();
+        }else if(clan==null){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Obavještenje");
+            alert.setHeaderText(null);
+            alert.setContentText("Niste izabrali nijednog člana!");
+
+            alert.showAndWait();
+        }else{
+            if(!(clan instanceof Skupstina)){
+                Clan c = new Skupstina(clan);
+                dao.promijeniClana(c);
+                clanovi.remove(clan);
+                clanovi.add(c);
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Obavještenje");
+                alert.setHeaderText(null);
+                alert.setContentText("Izabrana osoba je sada u skupštini!");
+
+                alert.showAndWait();
+            }else{
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Obavještenje");
+                alert.setHeaderText(null);
+                alert.setContentText("Izabrana osoba je već u skupštini!");
+
+                alert.showAndWait();
+            }
+        }
+    }
+
+    public void izbaciSkupstinaAction(ActionEvent actionEvent){
+        Clan clan = clanoviTableView.getSelectionModel().getSelectedItem();
+
+        if(clan instanceof Predsjednik){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Obavještenje");
+            alert.setHeaderText(null);
+            alert.setContentText("Izabrana osoba je predsjednik!");
+
+            alert.showAndWait();
+        }else if(clan==null){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Obavještenje");
+            alert.setHeaderText(null);
+            alert.setContentText("Niste izabrali nijednog člana!");
+
+            alert.showAndWait();
+        }else{
+            if(!(clan instanceof Skupstina)){
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Obavještenje");
+                alert.setHeaderText(null);
+                alert.setContentText("Izabrana osoba nije u skupštini!");
+
+                alert.showAndWait();
+            }else{
+                Clan c = new Clan(clan);
+                dao.promijeniClana(c);
+                clanovi.remove(clan);
+                clanovi.add(c);
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Obavještenje");
+                alert.setHeaderText(null);
+                alert.setContentText("Izabrana osoba je izbačena iz skupštine!");
+
+                alert.showAndWait();
+            }
+        }
+    }
+
     private String ucitajNaziv(){
         Scanner ulaz;
         try {

@@ -1,24 +1,37 @@
 
-Fsquid:S1148c"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8•©Øòƒ.
-Ksquid:S1481G"(Remove this unused "dao" local variable.(Ç»¯€ıÿÿÿÿ8®İåßƒ.
-Fsquid:S1148/"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8š´Ğòƒ.
-Ksquid:S1659"-Declare "obrisiClanaUpit" on a separate line.(Ÿ»“®8Àû „.
-Jsquid:S1659",Declare "dodajClanaUpit" on a separate line.(Ÿ»“®8ğŸÉòƒ.
-jsquid:S2095j"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(ßƒ± ùÿÿÿÿ8«Û“€„.
-Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ï·ÉÖ‚.
-Gsquid:S1148·"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÊºŸŞƒ.
+Fsquid:S1148G"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¯ÚÇŞƒ.
+Fsquid:S1148k"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8•©Øòƒ.
+Psquid:S1659"-Declare "obrisiClanaUpit" on a separate line.(Ï˜ã½ÿÿÿÿÿ8Àû „.
+Osquid:S1659",Declare "dodajClanaUpit" on a separate line.(Ï˜ã½ÿÿÿÿÿ8ğŸÉòƒ.
+“squid:S1319o"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ÀŠìÀüÿÿÿÿ8¸è‘€„.
+Fsquid:S11487"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8š´Ğòƒ.
+Qsquid:S1659".Declare "dajSkupstinuUpit" on a separate line.(Ï˜ã½ÿÿÿÿÿ8­Ùñ†„.
 ]
-squid:S899F";Do something with the "boolean" value returned by "delete".(Çì¥ğıÿÿÿÿ8®İåßƒ.
-ksquid:S2095­"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8ÊºŸŞƒ.
-Gsquid:S1148›"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÀŠ©„.
-lsquid:S4042F"IUse "java.nio.Files#delete" here for better messages on error conditions.(Çì¥ğıÿÿÿÿ8®İåßƒ.
-Gsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8»¹€„.
-Fsquid:S1148?"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¯ÚÇŞƒ.
-Gsquid:S1148±"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÊºŸŞƒ.
-“squid:S1319g"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ÀŠìÀüÿÿÿÿ8¸è‘€„.
-Lsquid:S2115")Add password protection to this database.(–Æƒƒüÿÿÿÿ8Ï·ÉÖ‚.
-Fsquid:S1148p"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8«Û“€„.
-@squid:S1643©"Use a StringBuilder instead.(¥…ˆÇşÿÿÿÿ8ÊºŸŞƒ.
-Asquid:S1148'"#Use a logger to log this exception.(Ç’Çê8®û¡Şƒ.
-Ysquid:S1141¬"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ÊºŸŞƒ.
-jsquid:S1192}"GDefine a constant instead of duplicating this literal "STRANO" 3 times.(‘¬Ú“úÿÿÿÿ8ášè€„.
+squid:S899N";Do something with the "boolean" value returned by "delete".(Çì¥ğıÿÿÿÿ8®İåßƒ.
+Ksquid:S1481O"(Remove this unused "dao" local variable.(Ç»¯€ıÿÿÿÿ8®İåßƒ.
+Xsquid:S1068"5Remove this unused "dodajProjekatUpit" private field.(Üƒ®ùÿÿÿÿ8ÖƒŠ„.
+jsquid:S2095r"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(ßƒ± ùÿÿÿÿ8«Û“€„.
+Ysquid:S1068"6Remove this unused "obrisiProjekatUpit" private field.(Üƒ®ùÿÿÿÿ8†ı”Š„.
+ksquid:S2095â"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8ÊºŸŞƒ.
+Gsquid:S1148Å"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8»¹€„.
+Rsquid:S1659"/Declare "dodajProjekatUpit" on a separate line.(Üƒ®ùÿÿÿÿ8ÖƒŠ„.
+ksquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Ü°¢Èøÿÿÿÿ8Ñò÷†„.
+squid:S1319~"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(§8ŠÜ÷†„.
+Gsquid:S1148Ğ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÀŠ©„.
+ksquid:S1192²"GDefine a constant instead of duplicating this literal "STRANO" 3 times.(‘¬Ú“úÿÿÿÿ8ášè€„.
+@squid:S1643Ş"Use a StringBuilder instead.(¥…ˆÇşÿÿÿÿ8ÊºŸŞƒ.
+Ssquid:S1659"0Declare "obrisiProjekatUpit" on a separate line.(Üƒ®ùÿÿÿÿ8†ı”Š„.
+Asquid:S1148("#Use a logger to log this exception.(Ç’Çê8®û¡Şƒ.
+lsquid:S4042N"IUse "java.nio.Files#delete" here for better messages on error conditions.(Çì¥ğıÿÿÿÿ8®İåßƒ.
+Gsquid:S1148æ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÊºŸŞƒ.
+Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ï·ÉÖ‚.
+Ssquid:S1659"0Declare "promijeniClanaUpit" on a separate line.(Ï˜ã½ÿÿÿÿÿ8ùùß‡„.
+Fsquid:S1148x"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8«Û“€„.
+Gsquid:S1148ì"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÊºŸŞƒ.
+Gsquid:S1148‡"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ñò÷†„.
+Ysquid:S1141á"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ÊºŸŞƒ.
+Osquid:S1659",Declare "nadjiClanaUpit" on a separate line.(Üƒ®ùÿÿÿÿ8Ñ˜Š„.
+Ysquid:S1068"6Remove this unused "dajSveProjekteUpit" private field.(Üƒ®ùÿÿÿÿ8¼†Š„.
+Gsquid:S1148§"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ñÜí‡„.
+Lsquid:S2115")Add password protection to this database.(–Æƒƒüÿÿÿÿ8Ï·ÉÖ‚.
+Usquid:S1068"2Remove this unused "nadjiClanaUpit" private field.(Üƒ®ùÿÿÿÿ8Ñ˜Š„.

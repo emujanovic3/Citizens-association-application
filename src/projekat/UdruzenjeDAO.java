@@ -209,6 +209,45 @@ public class UdruzenjeDAO {
         }
     }
 
+    public ArrayList<Projekat> dajSveProjekte(){
+        ArrayList<Projekat> projekti = new ArrayList<>();
+        try {
+            ResultSet rs = dajSveProjekteUpit.executeQuery();
+            while(rs.next()){
+                Projekat p = dajProjekatIzResultSeta(rs);
+                projekti.add(p);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return projekti;
+    }
+
+    private Projekat dajProjekatIzResultSeta(ResultSet rs) {
+        try {
+            return new Projekat(rs.getInt(1),rs.getString(2),nadjiClana(rs.getInt(3)),rs.getString(4));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private Clan nadjiClana(int id) {
+        try {
+            nadjiClanaUpit.setInt(1,id);
+            ResultSet rs = nadjiClanaUpit.executeQuery();
+
+            if(rs.next()){
+                return dajClanaIzResultSeta(rs);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
     private LocalDate dajDatumIzResultSeta(String datum) {
         String[] odvojeno = datum.split("-");
         return LocalDate.of(Integer.parseInt(odvojeno[0]),Integer.parseInt(odvojeno[1]),Integer.parseInt(odvojeno[2]));

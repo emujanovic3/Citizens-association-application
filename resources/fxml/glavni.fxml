@@ -36,7 +36,7 @@
             <TableView fx:id="clanoviTableView" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
               <columns>
                 <TableColumn fx:id="imeCol" prefWidth="90.0" text="Ime" />
-                <TableColumn fx:id="prezimeCol" prefWidth="100.0" text="Prezime" />
+                <TableColumn fx:id="prezimeCol" prefWidth="90.0" text="Prezime" />
               </columns>
             </TableView>
             <VBox prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2">

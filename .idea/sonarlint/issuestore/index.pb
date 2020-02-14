@@ -45,3 +45,7 @@ K
 src/projekat/Skupstina.java,d\f\dfaf1c043b7f4dec2092f654dc0782752460c81e
 A
 osnivacki_akt.txt,6\6\66cdaaec546e4c42a0657537426f6831df3d377b
+M
+resources/fxml/skupstina.fxml,8\f\8f9ca2d01a53f465afd2415362df122327655ecc
+U
+%src/projekat/SkupstinaController.java,e\e\eedd45eb7494cbdf8b04b9797307d5ef7f9f86b3

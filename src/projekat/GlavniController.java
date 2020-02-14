@@ -33,7 +33,7 @@ public class GlavniController {
     private UdruzenjeDAO dao = UdruzenjeDAO.getInstance();
     private String naziv;
     private ObservableList<Clan> clanovi = FXCollections.observableArrayList(dao.dajSveClanove());
-    private ObservableList<Projekat> projekti = FXCollections.observableArrayList();
+    private ObservableList<Projekat> projekti = FXCollections.observableArrayList(dao.dajSveProjekte());
 
     public GlavniController() {
         naziv = ucitajNaziv();
@@ -51,6 +51,10 @@ public class GlavniController {
         imeCol.setCellValueFactory(new PropertyValueFactory<>("Ime"));
         prezimeCol.setCellValueFactory(new PropertyValueFactory<>("Prezime"));
         clanoviTableView.setItems(clanovi);
+        clanoviTableView.setPlaceholder(new Label("Trenutno nema članova"));
+        nazivCol.setCellValueFactory((new PropertyValueFactory<>("Naziv")));
+        projektiTableView.setItems(projekti);
+        projektiTableView.setPlaceholder(new Label("Trenutno nema projekata"));
     }
 
     public void dodajClanaAction(ActionEvent actionEvent){

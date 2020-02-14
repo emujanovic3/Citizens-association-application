@@ -243,6 +243,34 @@ public class GlavniController {
         //result.ifPresent(letter -> System.out.println("Your choice: " + letter));
     }
 
+    public void dodajProjekatAction(ActionEvent actionEvent){
+
+    }
+
+    public void obrisiProjekatAction(ActionEvent actionEvent){
+        Projekat zaBrisanje = projektiTableView.getSelectionModel().getSelectedItem();
+
+        if(zaBrisanje==null){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Obavještenje");
+            alert.setHeaderText(null);
+            alert.setContentText("Niste izabrali nijedan projekat!");
+
+            alert.showAndWait();
+        }else{
+            dao.obrisiProjekat(zaBrisanje);
+            projekti.remove(zaBrisanje);
+            projektiTableView.setItems(projekti);
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Obavještenje");
+            alert.setHeaderText(null);
+            alert.setContentText("Izabrani projekat je uspješno obrisan!");
+
+            alert.showAndWait();
+        }
+    }
+
     private String ucitajNaziv(){
         Scanner ulaz;
         try {

@@ -233,6 +233,15 @@ public class UdruzenjeDAO {
         return null;
     }
 
+    public void obrisiProjekat(Projekat p){
+        try {
+            obrisiProjekatUpit.setInt(1,p.getId());
+            obrisiProjekatUpit.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     private Clan nadjiClana(int id) {
         try {
             nadjiClanaUpit.setInt(1,id);

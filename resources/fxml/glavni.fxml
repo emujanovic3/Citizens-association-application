@@ -12,7 +12,7 @@
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="180.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="190.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="175.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
         </columnConstraints>
         <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -48,6 +48,9 @@
                   <Button mnemonicParsing="false" onAction="#izbaciSkupstinaAction" prefWidth="120.0" text="Izbaci iz skupštine" />
                   <Button mnemonicParsing="false" onAction="#promijeniPredsjednikaAction" text="Promijeni predsjednika" />
                </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
             </VBox>
             <Label text="Predsjednik:" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
@@ -65,6 +68,15 @@
                 <TableColumn fx:id="nazivCol" minWidth="-Infinity" prefWidth="175.0" text="Naziv" />
               </columns>
             </TableView>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#dodajProjekatAction" text="Dodaj projekat" />
+                  <Button mnemonicParsing="false" onAction="#obrisiProjekatAction" text="Obriši  projekat" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
          </children>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

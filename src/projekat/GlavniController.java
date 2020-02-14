@@ -27,10 +27,13 @@ public class GlavniController {
     public TableView<Clan> clanoviTableView;
     public TableColumn<Clan,String> imeCol;
     public TableColumn<Clan,String> prezimeCol;
+    public TableView<Projekat> projektiTableView;
+    public TableColumn<Projekat,String> nazivCol;
 
     private UdruzenjeDAO dao = UdruzenjeDAO.getInstance();
     private String naziv;
     private ObservableList<Clan> clanovi = FXCollections.observableArrayList(dao.dajSveClanove());
+    private ObservableList<Projekat> projekti = FXCollections.observableArrayList();
 
     public GlavniController() {
         naziv = ucitajNaziv();
@@ -215,6 +218,8 @@ public class GlavniController {
                 clanovi.remove(stariP);
                 clanovi.add(exPredsjednik);
             }
+
+            //TODO ovdje se mozda moze nesto ubrzati
 
             clanovi.remove(result.get());
             clanovi.add(noviP);

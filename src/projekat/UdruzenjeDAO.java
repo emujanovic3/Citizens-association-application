@@ -13,6 +13,7 @@ public class UdruzenjeDAO {
     private Connection conn;
 
     private PreparedStatement dajSveClanoveUpit, dodajClanaUpit, obrisiClanaUpit, dajSkupstinuUpit, promijeniClanaUpit;
+    private PreparedStatement dajSveProjekteUpit, nadjiClanaUpit, dodajProjekatUpit, obrisiProjekatUpit;
 
     public static UdruzenjeDAO getInstance(){
         if(instance==null){
@@ -46,6 +47,10 @@ public class UdruzenjeDAO {
             dajSkupstinuUpit = conn.prepareStatement("SELECT * FROM clan WHERE skupstina=1;");
             promijeniClanaUpit = conn.prepareStatement("UPDATE clan SET ime=?, prezime=?, datum_rodjenja=?, adresa_stanovanja=?, " +
                     "grad=?, drzava=?, drzavljanstvo=?, predsjednik=?, skupstina=? WHERE id=?;");
+            dajSveProjekteUpit = conn.prepareStatement("SELECT * FROM projekat;");
+            nadjiClanaUpit = conn.prepareStatement("SELECT * FROM clan WHERE id=?;");
+            dodajProjekatUpit = conn.prepareStatement("INSERT INTO projekat VALUES(?,?,?,?);");
+            obrisiProjekatUpit = conn.prepareStatement("DELETE FROM projekat WHERE id=?;");
         } catch (SQLException e) {
             e.printStackTrace();
         }

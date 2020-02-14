@@ -14,10 +14,7 @@ import javafx.stage.Stage;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Scanner;
+import java.util.*;
 
 import static javafx.scene.layout.Region.USE_PREF_SIZE;
 
@@ -70,7 +67,7 @@ public class GlavniController {
             stage.setOnHiding((event) -> {
                 Clan novi = ctrl.getClan();
                 if(novi!=null){
-                    novi.setId(clanovi.size()+1);
+                    novi.setId(dajIdClan(dao.dajSveClanove()));
                     clanovi.add(novi);
                     dao.dodajClana(novi);
                     clanoviTableView.setItems(FXCollections.observableArrayList(clanovi));
@@ -256,7 +253,7 @@ public class GlavniController {
             stage.setOnHiding((event) -> {
                 Projekat novi = ctrl.getProjekat();
                 if(novi!=null){
-                    novi.setId(projekti.size()+1);
+                    novi.setId(dajIdProjekat(dao.dajSveProjekte()));
                     projekti.add(novi);
                     dao.dodajProjekat(novi);
                     projektiTableView.setItems(FXCollections.observableArrayList(projekti));
@@ -302,5 +299,27 @@ public class GlavniController {
             System.out.println("Datoteka osnivacki_akt.txt ne postoji ili se ne može otvoriti");
             return null;
         }
+    }
+
+    //Mozda ovdje mogu napraviti nesto genericko
+
+    private int dajIdClan(ArrayList<Clan> clanovi){
+        int maxId = 0;
+        for(Clan x : clanovi){
+            if(x.getId()>maxId){
+                maxId = x.getId();
+            }
+        }
+        return maxId+1;
+    }
+
+    private int dajIdProjekat(ArrayList<Projekat> projekti){
+        int maxId = 0;
+        for(Projekat x : projekti){
+            if(x.getId()>maxId){
+                maxId = x.getId();
+            }
+        }
+        return maxId+1;
     }
 }

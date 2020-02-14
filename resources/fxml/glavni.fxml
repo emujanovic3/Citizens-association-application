@@ -15,7 +15,7 @@
         </columnConstraints>
         <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+          <RowConstraints prefHeight="20.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="30.0" prefHeight="100.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
@@ -44,6 +44,7 @@
                   <Button mnemonicParsing="false" onAction="#skupstinaAction" prefWidth="120.0" text="Skupština" />
                   <Button mnemonicParsing="false" onAction="#dodajSkupstinaAction" prefWidth="120.0" text="Dodaj u skupštinu" />
                   <Button mnemonicParsing="false" onAction="#izbaciSkupstinaAction" prefWidth="120.0" text="Izbaci iz skupštine" />
+                  <Button mnemonicParsing="false" onAction="#promijeniPredsjednikaAction" text="Promijeni predsjednika" />
                </children>
             </VBox>
          </children>

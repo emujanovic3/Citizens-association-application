@@ -14,6 +14,8 @@ import javafx.stage.Stage;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
@@ -178,6 +180,49 @@ public class GlavniController {
                 alert.showAndWait();
             }
         }
+    }
+
+    public void promijeniPredsjednikaAction(ActionEvent actionEvent){
+        List<Clan> choices = new ArrayList<>();
+        Clan stariP = null;
+        for(Clan x:clanovi){
+            if(!(x instanceof Predsjednik)){
+                choices.add(x);
+            }else{
+                stariP = x;
+            }
+        }
+
+        ChoiceDialog<Clan> dialog = new ChoiceDialog<>(null, choices);
+        dialog.setTitle("Promjena predsjednika");
+        dialog.setHeaderText(null);
+        dialog.setContentText("Izaberite novog predsjednika:");
+
+// Traditional way to get the response value.
+        Optional<Clan> result = dialog.showAndWait();
+        if (result.isPresent()){
+            Clan noviP = new Predsjednik(result.get());
+            if(stariP!=null){
+                Clan exPredsjednik = new Clan(stariP);
+                dao.promijeniClana(exPredsjednik);
+                clanovi.remove(stariP);
+                clanovi.add(exPredsjednik);
+            }
+
+            clanovi.remove(result.get());
+            clanovi.add(noviP);
+            dao.promijeniClana(noviP);
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Obavještenje");
+            alert.setHeaderText(null);
+            alert.setContentText("Izabrana osoba je sada predsjednik!");
+
+            alert.showAndWait();
+        }
+
+// The Java 8 way to get the response value (with lambda expression).
+        //result.ifPresent(letter -> System.out.println("Your choice: " + letter));
     }
 
     private String ucitajNaziv(){

@@ -233,6 +233,20 @@ public class UdruzenjeDAO {
         return null;
     }
 
+    public void dodajProjekat(Projekat p){
+        try {
+            dodajProjekatUpit.setInt(1,p.getId());
+            dodajProjekatUpit.setString(2,p.getNaziv());
+            dodajProjekatUpit.setInt(3,p.getVodja().getId());
+            dodajProjekatUpit.setString(4,p.getOpis());
+
+            dodajProjekatUpit.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public void obrisiProjekat(Projekat p){
         try {
             obrisiProjekatUpit.setInt(1,p.getId());

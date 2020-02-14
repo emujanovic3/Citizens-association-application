@@ -244,7 +244,27 @@ public class GlavniController {
     }
 
     public void dodajProjekatAction(ActionEvent actionEvent){
-
+        try {
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/projekat.fxml"));
+            ProjekatController ctrl = new ProjekatController(clanovi);
+            loader.setController(ctrl);
+            Parent root = loader.load();
+            stage.setTitle("Dodaj projekat");
+            stage.setScene(new Scene(root, USE_PREF_SIZE, USE_PREF_SIZE));
+            stage.show();
+            stage.setOnHiding((event) -> {
+                Projekat novi = ctrl.getProjekat();
+                if(novi!=null){
+                    novi.setId(projekti.size()+1);
+                    projekti.add(novi);
+                    dao.dodajProjekat(novi);
+                    projektiTableView.setItems(FXCollections.observableArrayList(projekti));
+                }
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void obrisiProjekatAction(ActionEvent actionEvent){

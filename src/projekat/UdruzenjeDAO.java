@@ -13,7 +13,7 @@ public class UdruzenjeDAO {
     private Connection conn;
 
     private PreparedStatement dajSveClanoveUpit, dodajClanaUpit, obrisiClanaUpit, dajSkupstinuUpit, promijeniClanaUpit;
-    private PreparedStatement dajSveProjekteUpit, nadjiClanaUpit, dodajProjekatUpit, obrisiProjekatUpit;
+    private PreparedStatement dajSveProjekteUpit, nadjiClanaUpit, dodajProjekatUpit, obrisiProjekatUpit, promijeniProjekatUpit;
 
     public static UdruzenjeDAO getInstance(){
         if(instance==null){
@@ -51,6 +51,7 @@ public class UdruzenjeDAO {
             nadjiClanaUpit = conn.prepareStatement("SELECT * FROM clan WHERE id=?;");
             dodajProjekatUpit = conn.prepareStatement("INSERT INTO projekat VALUES(?,?,?,?);");
             obrisiProjekatUpit = conn.prepareStatement("DELETE FROM projekat WHERE id=?;");
+            promijeniProjekatUpit = conn.prepareStatement("UPDATE projekat SET naziv=?, vodja=?, opis=? WHERE id=?;");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -222,6 +223,23 @@ public class UdruzenjeDAO {
         }
 
         return projekti;
+    }
+
+    public void promijeniProjekat(Projekat p){
+        try {
+            promijeniProjekatUpit.setString(1,p.getNaziv());
+            if(p.getVodja()==null){
+                promijeniProjekatUpit.setInt(2,0);
+            }else{
+                promijeniProjekatUpit.setInt(2,p.getVodja().getId());
+            }
+            promijeniProjekatUpit.setString(3,p.getOpis());
+            promijeniProjekatUpit.setInt(4,p.getId());
+            promijeniProjekatUpit.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 
     private Projekat dajProjekatIzResultSeta(ResultSet rs) {

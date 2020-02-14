@@ -70,7 +70,7 @@ public class GlavniController {
                     novi.setId(dajIdClan(dao.dajSveClanove()));
                     clanovi.add(novi);
                     dao.dodajClana(novi);
-                    clanoviTableView.setItems(FXCollections.observableArrayList(clanovi));
+                    clanoviTableView.setItems(clanovi);
                 }
             });
         } catch (IOException e) {
@@ -80,15 +80,35 @@ public class GlavniController {
 
     public void obrisiClanaAction(ActionEvent actionEvent){
         Clan zaBrisanje = clanoviTableView.getSelectionModel().getSelectedItem();
+        if(zaBrisanje instanceof Predsjednik){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Obavještenje");
+            alert.setHeaderText(null);
+            alert.setContentText("Ne možete izbaciti predsjednika!");
+
+            alert.showAndWait();
+            return;
+        }
 
         if(zaBrisanje!=null){
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Potvrda brisanja osnivača:");
-            alert.setHeaderText("Obrisat ćete odabranog osnivača");
+            alert.setHeaderText("Obrisat ćete odabranog člana");
             alert.setContentText("Da li ste sigurni?");
 
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK){
+                ArrayList<Projekat> pr = dao.dajSveProjekte();
+                for(Projekat x : pr){
+                    if(x.getVodja().getId() == zaBrisanje.getId()){
+                        x.setVodja(null);
+                        dao.promijeniProjekat(x);
+                    }
+                }
+
+                projekti = FXCollections.observableArrayList(pr);
+                projektiTableView.setItems(projekti);
+
                 clanoviTableView.getItems().remove(zaBrisanje);
                 clanovi.remove(zaBrisanje);
                 dao.obrisiClana(zaBrisanje.getId());
@@ -285,6 +305,32 @@ public class GlavniController {
             alert.setContentText("Izabrani projekat je uspješno obrisan!");
 
             alert.showAndWait();
+        }
+    }
+
+    public void detaljiAction(ActionEvent actionEvent){
+        Projekat p = projektiTableView.getSelectionModel().getSelectedItem();
+
+        if(p==null){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Obavještenje");
+            alert.setHeaderText(null);
+            alert.setContentText("Niste izabrali nijedan projekat!");
+
+            alert.showAndWait();
+        }else{
+            try {
+                Stage stage = new Stage();
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/detalji.fxml"));
+                DetaljiController ctrl = new DetaljiController(p);
+                loader.setController(ctrl);
+                Parent root = loader.load();
+                stage.setTitle("Detalji");
+                stage.setScene(new Scene(root, USE_PREF_SIZE, USE_PREF_SIZE));
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 

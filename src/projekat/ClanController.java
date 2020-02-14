@@ -3,13 +3,8 @@ package projekat;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
-
-import java.time.LocalDate;
 
 public class ClanController {
     public TextField imeClanField;
@@ -78,6 +73,17 @@ public class ClanController {
             drzavaClanField.getStyleClass().removeAll("poljeIspravno");
             drzavaClanField.getStyleClass().add("poljeNeispravno");
             sveOk = false;
+        }
+
+        if(datePickerClan.getValue() == null){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Obavještenje");
+            alert.setHeaderText(null);
+            alert.setContentText("Morate izabrati neki datum rođenja!");
+
+            sveOk = false;
+
+            alert.showAndWait();
         }
 
         if(sveOk){

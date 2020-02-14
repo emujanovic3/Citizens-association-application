@@ -51,3 +51,5 @@ U
 %src/projekat/SkupstinaController.java,e\e\eedd45eb7494cbdf8b04b9797307d5ef7f9f86b3
 T
 $src/projekat/ProjekatController.java,c\7\c7238c5f023f3cecc9f17c041eb1643469136714
+L
+resources/fxml/projekat.fxml,3\3\33ef99bff5fc4c64288b8128d5d80fd40dec7f37

@@ -57,3 +57,11 @@ K
 resources/fxml/detalji.fxml,0\5\05783712319924120eca3b02ddef83fa2178f339
 S
 #src/projekat/DetaljiController.java,2\2\2275146f92f4c3c8bfd6570a8ac2b6bab788e6ba
+`
+0.idea/libraries/at_mukprojects_giphy4j_1_0_1.xml,2\d\2dc660be48db27c6b13229963155f1bec6896863
+L
+resources/fxml/pretraga.fxml,c\1\c1f731ba0dad15a887bd6a64d9c59f6ef50366e1
+9
+	slika.txt,a\0\a0d801c7f8cd7a291c3dd1e21ff27b9c74f08ae2
+T
+$src/projekat/PretragaController.java,5\5\55b479d2e3875e4df71913652e1e12c15840b0ef

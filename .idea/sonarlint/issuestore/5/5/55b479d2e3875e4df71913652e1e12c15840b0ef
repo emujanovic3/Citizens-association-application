@@ -1,0 +1,11 @@
+
+vsquid:S1450"SRemove the "feed" field and declare it as a local variable in the relevant methods.(¦–§ùÿÿÿÿ8×™É„.
+Š"squid:ClassVariableVisibilityCheck"VMake anchorPane a static final constant or non-public and provide accessors if needed.(Û§™8×™É„.
+‘"squid:ClassVariableVisibilityCheck"WMake fldPretraga a static final constant or non-public and provide accessors if needed.(ú¹›ÿùÿÿÿÿ8×™É„.
+esquid:UselessImportCheck"5Remove this unused import 'java.util.ResourceBundle'.(ıÆ£¯øÿÿÿÿ8å¿ÏÉ„.
+"squid:ClassVariableVisibilityCheck"VMake scrollPane a static final constant or non-public and provide accessors if needed.(àÎÎ¿ûÿÿÿÿ8×™É„.
+ˆ"squid:ClassVariableVisibilityCheck"TMake tilePane a static final constant or non-public and provide accessors if needed.(ˆ®58×™É„.
+Fsquid:S1148j"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8áó›É„.
+psquid:S3776%"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(í›ßó8×™É„.
+Psquid:S1172%"2Remove this unused method parameter "actionEvent".(í›ßó8×™É„.
+Jsquid:S1602c",Remove useless curly braces around statement(â†­Ô8×™É„.

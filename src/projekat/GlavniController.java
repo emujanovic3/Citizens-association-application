@@ -469,7 +469,7 @@ public class GlavniController {
 
 // Traditional way to get the response value.
             Optional<String> result2 = dialog.showAndWait();
-            if (result.isPresent()){
+            if (result2.isPresent()){
                 File novaSlika = new File(result2.get());
 
                 PrintWriter izlaz;

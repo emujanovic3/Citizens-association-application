@@ -88,7 +88,7 @@
             <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
               <buttons>
                 <Button mnemonicParsing="false" onAction="#promijeniNazivAction" text="Promijeni naziv" />
-                  <Button mnemonicParsing="false" text="Ugasi udruženje" />
+                  <Button mnemonicParsing="false" onAction="#ugasiUdruzenjeAction" text="Ugasi udruženje" />
                   <Button mnemonicParsing="false" onAction="#izadjiAction" text="Izađi" />
               </buttons>
             </ButtonBar>

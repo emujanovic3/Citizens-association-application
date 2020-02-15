@@ -418,6 +418,25 @@ public class GlavniController {
         //result.ifPresent(name -> System.out.println("Your name: " + name));
     }
 
+    public void ugasiUdruzenjeAction(ActionEvent actionEvent){
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Gašenje udruženja");
+        alert.setHeaderText(null);
+        alert.setContentText("Da li ste sigurni da želite ugasiti udruženje?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK){
+            // ... user chose OK
+            UdruzenjeDAO.removeInstance();
+            File dbfile = new File("baza.db");
+            dbfile.delete();
+
+            System.exit(0);
+        } else {
+            // ... user chose CANCEL or closed the dialog
+        }
+    }
+
     public void izadjiAction(ActionEvent actionEvent){
         System.exit(0);
     }

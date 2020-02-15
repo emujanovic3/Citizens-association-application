@@ -91,7 +91,7 @@ public class LoginController {
             GlavniController ctrl = new GlavniController();
             loader.setController(ctrl);
             Parent root = loader.load();
-            stage.setTitle("Udruženje");
+            stage.setTitle(bundle.getString("udruzenje"));
             stage.setScene(new Scene(root, USE_PREF_SIZE, USE_PREF_SIZE));
             stage.show();
         } catch (IOException e) {

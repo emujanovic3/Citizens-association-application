@@ -5,6 +5,8 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+import java.util.ResourceBundle;
+
 public class DetaljiController {
     public Label nazivLbl;
     public Label vodjaLbl;
@@ -19,7 +21,8 @@ public class DetaljiController {
     public void initialize(){
         nazivLbl.setText(projekat.getNaziv());
         if(projekat.getVodja()==null){
-            vodjaLbl.setText("Niko ne vodi ovaj projekat");
+            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+            vodjaLbl.setText(bundle.getString("nikoNeVodi"));
         }else{
             vodjaLbl.setText(projekat.getVodja().getIme() + " " + projekat.getVodja().getPrezime());
         }

@@ -65,3 +65,9 @@ L
 	slika.txt,a\0\a0d801c7f8cd7a291c3dd1e21ff27b9c74f08ae2
 T
 $src/projekat/PretragaController.java,5\5\55b479d2e3875e4df71913652e1e12c15840b0ef
+P
+ resources/Translation.properties,1\6\16da11ed28a04593d9825b11c421f14fb4b29ff5
+V
+&resources/Translation_bs_BA.properties,4\9\4960dd897e1b88ba964d498ad0a1120811996951
+V
+&resources/Translation_en_US.properties,a\6\a6142ffa65b83fb245a9695029380a844a46d322

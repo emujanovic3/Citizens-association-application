@@ -109,11 +109,12 @@ public class PretragaController {
     }
 
     public void okAction(ActionEvent actionEvent){
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
         if(adresa==null){
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Nijedna slika nije izabrana");
+            alert.setTitle(bundle.getString("nijednaSlikaNijeIzabrana"));
             alert.setHeaderText(null);
-            alert.setContentText("Unesite pretragu");
+            alert.setContentText(bundle.getString("unesitePretragu"));
 
             alert.showAndWait();
         }else{

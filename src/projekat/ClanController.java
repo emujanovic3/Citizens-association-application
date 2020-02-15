@@ -6,6 +6,8 @@ import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.util.ResourceBundle;
+
 public class ClanController {
     public TextField imeClanField;
     public TextField prezimeClanField;
@@ -77,9 +79,10 @@ public class ClanController {
 
         if(datePickerClan.getValue() == null){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Obavještenje");
+            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+            alert.setTitle(bundle.getString("obavjestenje"));
             alert.setHeaderText(null);
-            alert.setContentText("Morate izabrati neki datum rođenja!");
+            alert.setContentText(bundle.getString("nekiDatumRodjenja"));
 
             sveOk = false;
 

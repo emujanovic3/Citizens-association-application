@@ -33,6 +33,7 @@ public class GlavniController {
     private String naziv;
     private ObservableList<Clan> clanovi = FXCollections.observableArrayList(dao.dajSveClanove());
     private ObservableList<Projekat> projekti = FXCollections.observableArrayList(dao.dajSveProjekte());
+    private ResourceBundle bundle = ResourceBundle.getBundle("Translation");
 
     public GlavniController() {
         naziv = ucitajNaziv();
@@ -50,23 +51,22 @@ public class GlavniController {
         imeCol.setCellValueFactory(new PropertyValueFactory<>("Ime"));
         prezimeCol.setCellValueFactory(new PropertyValueFactory<>("Prezime"));
         clanoviTableView.setItems(clanovi);
-        clanoviTableView.setPlaceholder(new Label("Trenutno nema članova"));
+        clanoviTableView.setPlaceholder(new Label(bundle.getString("nemaClanova")));
         nazivCol.setCellValueFactory((new PropertyValueFactory<>("Naziv")));
         projektiTableView.setItems(projekti);
-        projektiTableView.setPlaceholder(new Label("Trenutno nema projekata"));
+        projektiTableView.setPlaceholder(new Label(bundle.getString("nemaProjekata")));
 
         slika.setImage(new Image(ucitajSliku(),128,128,false,false));
     }
 
     public void dodajClanaAction(ActionEvent actionEvent){
         try {
-            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
             Stage stage = new Stage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/clan.fxml"),bundle);
             ClanController ctrl = new ClanController();
             loader.setController(ctrl);
             Parent root = loader.load();
-            stage.setTitle("Dodaj člana");
+            stage.setTitle(bundle.getString("dodajClana"));
             stage.setScene(new Scene(root, USE_PREF_SIZE, USE_PREF_SIZE));
             stage.show();
             stage.setOnHiding((event) -> {
@@ -87,9 +87,9 @@ public class GlavniController {
         Clan zaBrisanje = clanoviTableView.getSelectionModel().getSelectedItem();
         if(zaBrisanje instanceof Predsjednik){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Obavještenje");
+            alert.setTitle(bundle.getString("obavjestenje"));
             alert.setHeaderText(null);
-            alert.setContentText("Ne možete izbaciti predsjednika!");
+            alert.setContentText(bundle.getString("neMozeteIzbacitiPredsjedinka"));
 
             alert.showAndWait();
             return;
@@ -97,9 +97,9 @@ public class GlavniController {
 
         if(zaBrisanje!=null){
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Potvrda brisanja osnivača:");
-            alert.setHeaderText("Obrisat ćete odabranog člana");
-            alert.setContentText("Da li ste sigurni?");
+            alert.setTitle(bundle.getString("potvrdaBrisanjaClana"));
+            alert.setHeaderText(bundle.getString("obrisatCeteOdabranogClana"));
+            alert.setContentText(bundle.getString("daLiSteSigurni"));
 
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK){
@@ -124,12 +124,11 @@ public class GlavniController {
     public void skupstinaAction(ActionEvent actionEvent){
         try {
             Stage stage = new Stage();
-            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/skupstina.fxml"),bundle);
             SkupstinaController ctrl = new SkupstinaController();
             loader.setController(ctrl);
             Parent root = loader.load();
-            stage.setTitle("Skupština");
+            stage.setTitle(bundle.getString("skupstina"));
             stage.setScene(new Scene(root, USE_PREF_SIZE, USE_PREF_SIZE));
             stage.show();
         } catch (IOException e) {
@@ -142,16 +141,16 @@ public class GlavniController {
 
         if(clan instanceof Predsjednik){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Obavještenje");
+            alert.setTitle(bundle.getString("obavjestenje"));
             alert.setHeaderText(null);
-            alert.setContentText("Izabrana osoba je predsjednik!");
+            alert.setContentText(bundle.getString("izabranaOsobaJePredsjednik"));
 
             alert.showAndWait();
         }else if(clan==null){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Obavještenje");
+            alert.setTitle(bundle.getString("obavjestenje"));
             alert.setHeaderText(null);
-            alert.setContentText("Niste izabrali nijednog člana!");
+            alert.setContentText(bundle.getString("nisteIzabraliNijednogClana"));
 
             alert.showAndWait();
         }else{
@@ -162,16 +161,16 @@ public class GlavniController {
                 clanovi.add(c);
 
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Obavještenje");
+                alert.setTitle(bundle.getString("obavjestenje"));
                 alert.setHeaderText(null);
-                alert.setContentText("Izabrana osoba je sada u skupštini!");
+                alert.setContentText(bundle.getString("izabranaOsobaJeSadaUSkupstini"));
 
                 alert.showAndWait();
             }else{
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Obavještenje");
+                alert.setTitle(bundle.getString("obavjestenje"));
                 alert.setHeaderText(null);
-                alert.setContentText("Izabrana osoba je već u skupštini!");
+                alert.setContentText(bundle.getString("izabranaOsobaJeVecUSkupstini"));
 
                 alert.showAndWait();
             }
@@ -183,24 +182,24 @@ public class GlavniController {
 
         if(clan instanceof Predsjednik){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Obavještenje");
+            alert.setTitle(bundle.getString("obavjestenje"));
             alert.setHeaderText(null);
-            alert.setContentText("Izabrana osoba je predsjednik!");
+            alert.setContentText(bundle.getString("izabranaOsobaJePredsjednik"));
 
             alert.showAndWait();
         }else if(clan==null){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Obavještenje");
+            alert.setTitle(bundle.getString("obavjestenje"));
             alert.setHeaderText(null);
-            alert.setContentText("Niste izabrali nijednog člana!");
+            alert.setContentText(bundle.getString("nisteIzabraliNijednogClana"));
 
             alert.showAndWait();
         }else{
             if(!(clan instanceof Skupstina)){
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Obavještenje");
+                alert.setTitle(bundle.getString("obavjestenje"));
                 alert.setHeaderText(null);
-                alert.setContentText("Izabrana osoba nije u skupštini!");
+                alert.setContentText(bundle.getString("izabranaOsobaNijeUSkupstini"));
 
                 alert.showAndWait();
             }else{
@@ -210,9 +209,9 @@ public class GlavniController {
                 clanovi.add(c);
 
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Obavještenje");
+                alert.setTitle(bundle.getString("obavjestenje"));
                 alert.setHeaderText(null);
-                alert.setContentText("Izabrana osoba je izbačena iz skupštine!");
+                alert.setContentText(bundle.getString("izabranaOsobaJeIzbacenaIzSkupstine"));
 
                 alert.showAndWait();
             }
@@ -231,9 +230,9 @@ public class GlavniController {
         }
 
         ChoiceDialog<Clan> dialog = new ChoiceDialog<>(null, choices);
-        dialog.setTitle("Promjena predsjednika");
+        dialog.setTitle(bundle.getString("promjenaPredsjednika"));
         dialog.setHeaderText(null);
-        dialog.setContentText("Izaberite novog predsjednika:");
+        dialog.setContentText(bundle.getString("izaberiteNovogPredsjednika"));
 
 // Traditional way to get the response value.
         Optional<Clan> result = dialog.showAndWait();
@@ -255,9 +254,9 @@ public class GlavniController {
             imePredsjednika.setText(noviP.getIme() + " " + noviP.getPrezime());
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Obavještenje");
+            alert.setTitle(bundle.getString("obavjestenje"));
             alert.setHeaderText(null);
-            alert.setContentText("Izabrana osoba je sada predsjednik!");
+            alert.setContentText(bundle.getString("izabranaOsobaJePredsjednik"));
 
             alert.showAndWait();
         }
@@ -269,12 +268,11 @@ public class GlavniController {
     public void dodajProjekatAction(ActionEvent actionEvent){
         try {
             Stage stage = new Stage();
-            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/projekat.fxml"),bundle);
             ProjekatController ctrl = new ProjekatController(clanovi);
             loader.setController(ctrl);
             Parent root = loader.load();
-            stage.setTitle("Dodaj projekat");
+            stage.setTitle(bundle.getString("dodajProjekat"));
             stage.setScene(new Scene(root, USE_PREF_SIZE, USE_PREF_SIZE));
             stage.show();
             stage.setOnHiding((event) -> {
@@ -296,9 +294,9 @@ public class GlavniController {
 
         if(zaBrisanje==null){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Obavještenje");
+            alert.setTitle(bundle.getString("obavjestenje"));
             alert.setHeaderText(null);
-            alert.setContentText("Niste izabrali nijedan projekat!");
+            alert.setContentText(bundle.getString("nisteIzabraliNijedanProjekat"));
 
             alert.showAndWait();
         }else{
@@ -307,9 +305,9 @@ public class GlavniController {
             projektiTableView.setItems(projekti);
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Obavještenje");
+            alert.setTitle(bundle.getString("obavjestenje"));
             alert.setHeaderText(null);
-            alert.setContentText("Izabrani projekat je uspješno obrisan!");
+            alert.setContentText(bundle.getString("izabraniProjekatJeUspjesnoObrisan"));
 
             alert.showAndWait();
         }
@@ -320,20 +318,19 @@ public class GlavniController {
 
         if(p==null){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Obavještenje");
+            alert.setTitle(bundle.getString("obavjestenje"));
             alert.setHeaderText(null);
-            alert.setContentText("Niste izabrali nijedan projekat!");
+            alert.setContentText(bundle.getString("nisteIzabraliNijedanProjekat"));
 
             alert.showAndWait();
         }else{
             try {
                 Stage stage = new Stage();
-                ResourceBundle bundle = ResourceBundle.getBundle("Translation");
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/detalji.fxml"),bundle);
                 DetaljiController ctrl = new DetaljiController(p);
                 loader.setController(ctrl);
                 Parent root = loader.load();
-                stage.setTitle("Detalji");
+                stage.setTitle(bundle.getString("detalji"));
                 stage.setScene(new Scene(root, USE_PREF_SIZE, USE_PREF_SIZE));
                 stage.show();
             } catch (IOException e) {
@@ -347,9 +344,9 @@ public class GlavniController {
 
         if(p==null){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Obavještenje");
+            alert.setTitle(bundle.getString("obavjestenje"));
             alert.setHeaderText(null);
-            alert.setContentText("Niste izabrali nijedan projekat!");
+            alert.setContentText(bundle.getString("nisteIzabraliNijedanProjekat"));
 
             alert.showAndWait();
         }else{
@@ -360,9 +357,9 @@ public class GlavniController {
             }
 
             ChoiceDialog<Clan> dialog = new ChoiceDialog<>(null, choices);
-            dialog.setTitle("Promjena vođe");
+            dialog.setTitle(bundle.getString("promjenaVodje"));
             dialog.setHeaderText(null);
-            dialog.setContentText("Izaberite vođu:");
+            dialog.setContentText(bundle.getString("izaberiteVodju"));
 
             Optional<Clan> result = dialog.showAndWait();
             if (result.isPresent()){
@@ -374,9 +371,9 @@ public class GlavniController {
                 dao.promijeniProjekat(p);
 
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Obavještenje");
+                alert.setTitle(bundle.getString("obavjestenje"));
                 alert.setHeaderText(null);
-                alert.setContentText("Izabrana osoba je sada vođa!");
+                alert.setContentText(bundle.getString("izabranaOsobaJeSadaVodja"));
 
                 alert.showAndWait();
             }
@@ -385,9 +382,9 @@ public class GlavniController {
 
     public void promijeniNazivAction(ActionEvent actionEvent){
         TextInputDialog dialog = new TextInputDialog("");
-        dialog.setTitle("Promjena naziva");
+        dialog.setTitle(bundle.getString("promjenaNaziva"));
         dialog.setHeaderText(null);
-        dialog.setContentText("Unesite novi naziv:");
+        dialog.setContentText(bundle.getString("unesiteNoviNaziv"));
 
 // Traditional way to get the response value.
         Optional<String> result = dialog.showAndWait();
@@ -430,9 +427,9 @@ public class GlavniController {
 
     public void ugasiUdruzenjeAction(ActionEvent actionEvent){
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Gašenje udruženja");
+        alert.setTitle(bundle.getString("gasenjeUdruzenja"));
         alert.setHeaderText(null);
-        alert.setContentText("Da li ste sigurni da želite ugasiti udruženje?");
+        alert.setContentText(bundle.getString("daLiSteSigurniDaZeliteUgasitiUdruzenje"));
 
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
@@ -453,13 +450,13 @@ public class GlavniController {
 
     public void slikaAction(ActionEvent actionEvent){
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Promjena slike");
+        alert.setTitle(bundle.getString("promjenaSlike"));
         alert.setHeaderText(null);
-        alert.setContentText("Odakle želite izabrati sliku");
+        alert.setContentText(bundle.getString("odakleZeliteIzabratiSliku"));
 
-        ButtonType buttonTypeOne = new ButtonType("Računar");
-        ButtonType buttonTypeTwo = new ButtonType("Internet");
-        ButtonType buttonTypeCancel = new ButtonType("Odustani", ButtonBar.ButtonData.CANCEL_CLOSE);
+        ButtonType buttonTypeOne = new ButtonType(bundle.getString("racunar"));
+        ButtonType buttonTypeTwo = new ButtonType(bundle.getString("internet"));
+        ButtonType buttonTypeCancel = new ButtonType(bundle.getString("odustani"), ButtonBar.ButtonData.CANCEL_CLOSE);
 
         alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo, buttonTypeCancel);
 
@@ -467,9 +464,9 @@ public class GlavniController {
         if (result.get() == buttonTypeOne){
             // ... user chose "One"
             TextInputDialog dialog = new TextInputDialog("");
-            dialog.setTitle("Slika");
+            dialog.setTitle(bundle.getString("slika"));
             dialog.setHeaderText(null);
-            dialog.setContentText("Unesite put do slike:");
+            dialog.setContentText(bundle.getString("unesitePutDoSlike"));
 
 // Traditional way to get the response value.
             Optional<String> result2 = dialog.showAndWait();
@@ -496,12 +493,11 @@ public class GlavniController {
             Parent root = null;
             try {
                 Stage myStage = new Stage();
-                ResourceBundle bundle = ResourceBundle.getBundle("Translation");
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pretraga.fxml"),bundle);
                 PretragaController ctrl = new PretragaController();
                 loader.setController(ctrl);
                 root = loader.load();
-                myStage.setTitle("Preteraga");
+                myStage.setTitle(bundle.getString("pretraga"));
                 myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
                 myStage.show();
                 myStage.setOnHiding(windowEvent -> {

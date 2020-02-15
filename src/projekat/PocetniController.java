@@ -34,6 +34,7 @@ public class PocetniController {
     public TextField sifraField;
 
     private ArrayList<Clan> osnivaci = new ArrayList<>();
+    private ResourceBundle bundle = ResourceBundle.getBundle("Translation");
 
     @FXML
     public void initialize(){
@@ -48,12 +49,11 @@ public class PocetniController {
     public void dodajOsnivacaAction(ActionEvent actionEvent){
         try {
             Stage stage = new Stage();
-            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/clan.fxml"),bundle);
             ClanController ctrl = new ClanController();
             loader.setController(ctrl);
             Parent root = loader.load();
-            stage.setTitle("Dodaj osnivača");
+            stage.setTitle(bundle.getString("dodajOsnivaca"));
             stage.setScene(new Scene(root, USE_PREF_SIZE, USE_PREF_SIZE));
             stage.show();
             stage.setOnHiding((event) -> {
@@ -74,9 +74,9 @@ public class PocetniController {
 
         if(zaBrisanje!=null){
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Potvrda brisanja osnivača:");
-            alert.setHeaderText("Obrisat ćete odabranog osnivača");
-            alert.setContentText("Da li ste sigurni?");
+            alert.setTitle(bundle.getString("potvrdaBrisanjaOsnivaca"));
+            alert.setHeaderText(bundle.getString("obrisatCeteOdabranogOsnivaca"));
+            alert.setContentText(bundle.getString("daLiSteSigurni"));
 
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK){
@@ -138,7 +138,7 @@ public class PocetniController {
 
                 try {
                     if(osnivaci.size()<3) {
-                        throw new NeispravniOsnivaciException("Potrebna su najmanje 3 osnivača!");
+                        throw new NeispravniOsnivaciException(bundle.getString("potrebnaSuNajmanjeTriOsnivaca"));
                     }
 
                     boolean baremJedanBIH = false;
@@ -147,7 +147,7 @@ public class PocetniController {
                         LocalDate now = LocalDate.now();
 
                         if(Math.abs(Period.between(now,x.getDatumRodjenja()).getYears())<18){
-                            throw new NeispravniOsnivaciException("Svi osnivači moraju imati najmanje 18 godina!");
+                            throw new NeispravniOsnivaciException(bundle.getString("sviOsnivaciMorajuImatiNajmanjeGodina"));
                         }
 
                         if(x.getDrzavljanstvo().equals(Drzavljanstvo.BIH)){
@@ -156,7 +156,7 @@ public class PocetniController {
                     }
 
                     if(baremJedanBIH==false){
-                        throw new NeispravniOsnivaciException("Barem jedan osnivač mora imati državljanstvo BIH!");
+                        throw new NeispravniOsnivaciException(bundle.getString("baremJedanOsnivacMoraImati"));
                     }
 
                     PrintWriter izlaz;
@@ -210,8 +210,8 @@ public class PocetniController {
                     stage.close();
                 } catch (NeispravniOsnivaciException e) {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setTitle("Greška");
-                    alert.setHeaderText("Došlo je do greške!");
+                    alert.setTitle(bundle.getString("greska"));
+                    alert.setHeaderText(bundle.getString("dosloJeDoGreske"));
                     alert.setContentText(e.getMessage());
 
                     alert.showAndWait();
@@ -230,12 +230,11 @@ public class PocetniController {
     private void otvoriGlavniProzor() {
         try {
             Stage stage = new Stage();
-            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/glavni.fxml"),bundle);
             GlavniController ctrl = new GlavniController();
             loader.setController(ctrl);
             Parent root = loader.load();
-            stage.setTitle("Udruženje");
+            stage.setTitle(bundle.getString("udruzenje"));
             stage.setScene(new Scene(root, USE_PREF_SIZE, USE_PREF_SIZE));
             stage.show();
         } catch (IOException e) {

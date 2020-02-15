@@ -34,7 +34,7 @@
       <Label text="Državljanstvo:" GridPane.rowIndex="6" />
       <TextField fx:id="imeClanField" GridPane.columnIndex="1" GridPane.columnSpan="2" />
       <TextField fx:id="prezimeClanField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-       <DatePicker fx:id="datePickerClan" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" />
+       <DatePicker fx:id="datePickerClan" promptText="Izaberi datum" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" />
       <TextField fx:id="adresaClanField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
       <TextField fx:id="gradClanField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
       <TextField fx:id="drzavaClanField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />

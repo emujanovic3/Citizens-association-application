@@ -9,6 +9,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -24,6 +26,7 @@ public class GlavniController {
     public TableColumn<Clan,String> prezimeCol;
     public TableView<Projekat> projektiTableView;
     public TableColumn<Projekat,String> nazivCol;
+    public ImageView slika;
 
     private UdruzenjeDAO dao = UdruzenjeDAO.getInstance();
     private String naziv;
@@ -50,6 +53,8 @@ public class GlavniController {
         nazivCol.setCellValueFactory((new PropertyValueFactory<>("Naziv")));
         projektiTableView.setItems(projekti);
         projektiTableView.setPlaceholder(new Label("Trenutno nema projekata"));
+
+        slika.setImage(new Image(ucitajSliku(),128,128,false,false));
     }
 
     public void dodajClanaAction(ActionEvent actionEvent){
@@ -474,5 +479,18 @@ public class GlavniController {
             }
         }
         return maxId+1;
+    }
+
+    private String ucitajSliku(){
+        Scanner ulaz;
+        try {
+            ulaz = new Scanner(new FileReader("slika.txt"));
+            String naziv = ulaz.nextLine();
+            ulaz.close();
+            return naziv;
+        } catch (FileNotFoundException e) {
+            System.out.println("Datoteka slika.txt ne postoji ili se ne može otvoriti");
+            return null;
+        }
     }
 }

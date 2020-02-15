@@ -177,6 +177,16 @@ public class PocetniController {
                         return;
                     }
 
+                    try {
+                        izlaz = new PrintWriter(new FileWriter("slika.txt"));
+                        File s = new File("resources/img/etf.png");
+
+                        izlaz.println(s.toURI());
+                        izlaz.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
                     UdruzenjeDAO dao = UdruzenjeDAO.getInstance();
 
                     for(int i=0;i<osnivaci.size();i++){

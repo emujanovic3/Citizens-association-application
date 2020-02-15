@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -15,8 +16,8 @@
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
         </columnConstraints>
         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
           <RowConstraints vgrow="SOMETIMES" />
           <RowConstraints minHeight="30.0" prefHeight="100.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -92,6 +93,11 @@
                   <Button mnemonicParsing="false" onAction="#izadjiAction" text="Izađi" />
               </buttons>
             </ButtonBar>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.rowSpan="2">
+               <graphic>
+                  <ImageView fx:id="slika" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
          </children>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

@@ -375,6 +375,12 @@ public class GlavniController {
         }
     }
 
+    public void izadjiAction(ActionEvent actionEvent){
+        System.exit(0);
+    }
+
+
+
     private String ucitajNaziv(){
         Scanner ulaz;
         try {

@@ -22,7 +22,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label fx:id="nazivLabel" text="Naziv" GridPane.columnIndex="2">
+            <Label fx:id="nazivLabel" text="Naziv" GridPane.columnIndex="2" GridPane.columnSpan="2147483647">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -32,7 +32,10 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label text="Članovi:" GridPane.rowIndex="2" />
+            <Label text="Članovi" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font></Label>
             <TableView fx:id="clanoviTableView" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
               <columns>
                 <TableColumn fx:id="imeCol" prefWidth="90.0" text="Ime" />
@@ -57,12 +60,15 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label fx:id="imePredsjednika" text="Ime i prezime" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label fx:id="imePredsjednika" text="Ime i prezime" GridPane.columnIndex="2" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label text="Projekti:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label text="Projekti" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font></Label>
             <TableView fx:id="projektiTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
               <columns>
                 <TableColumn fx:id="nazivCol" minWidth="-Infinity" prefWidth="175.0" text="Naziv" />
@@ -81,7 +87,7 @@
             </VBox>
             <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
               <buttons>
-                <Button mnemonicParsing="false" text="Promijeni naziv" />
+                <Button mnemonicParsing="false" onAction="#promijeniNazivAction" text="Promijeni naziv" />
                   <Button mnemonicParsing="false" text="Ugasi udruženje" />
                   <Button mnemonicParsing="false" onAction="#izadjiAction" text="Izađi" />
               </buttons>

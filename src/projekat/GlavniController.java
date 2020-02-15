@@ -11,9 +11,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 import static javafx.scene.layout.Region.USE_PREF_SIZE;
@@ -375,11 +373,54 @@ public class GlavniController {
         }
     }
 
+    public void promijeniNazivAction(ActionEvent actionEvent){
+        TextInputDialog dialog = new TextInputDialog("");
+        dialog.setTitle("Promjena naziva");
+        dialog.setHeaderText(null);
+        dialog.setContentText("Unesite novi naziv:");
+
+// Traditional way to get the response value.
+        Optional<String> result = dialog.showAndWait();
+        if (result.isPresent()){
+            ArrayList<String> fajl = new ArrayList<>();
+            fajl.add(result.get());
+
+            Scanner ulaz;
+            try {
+                ulaz = new Scanner(new FileReader("osnivacki_akt.txt"));
+                String stariNaziv = ulaz.nextLine();
+
+                while(ulaz.hasNextLine()){
+                    fajl.add(ulaz.nextLine());
+                }
+
+                ulaz.close();
+            } catch (FileNotFoundException e) {
+                System.out.println("Datoteka osnivacki_akt.txt ne postoji ili se ne može otvoriti");
+                return;
+            }
+
+            PrintWriter izlaz;
+            try {
+                izlaz = new PrintWriter(new FileWriter("osnivacki_akt.txt"));
+                for(String x : fajl){
+                    izlaz.println(x);
+                }
+
+                nazivLabel.setText("\"" + fajl.get(0) + "\"");
+                izlaz.close();
+            } catch (IOException e) {
+                System.out.println("Datoteka osnivacki_akt.txt se ne može otvoriti");
+            }
+        }
+
+// The Java 8 way to get the response value (with lambda expression).
+        //result.ifPresent(name -> System.out.println("Your name: " + name));
+    }
+
     public void izadjiAction(ActionEvent actionEvent){
         System.exit(0);
     }
-
-
 
     private String ucitajNaziv(){
         Scanner ulaz;

@@ -12,6 +12,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import java.util.ResourceBundle;
 import java.util.Scanner;
 
 import static javafx.scene.layout.Region.USE_PREF_SIZE;
@@ -85,7 +86,8 @@ public class LoginController {
     private void otvoriGlavniProzor() {
         try {
             Stage stage = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/glavni.fxml"));
+            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/glavni.fxml"),bundle);
             GlavniController ctrl = new GlavniController();
             loader.setController(ctrl);
             Parent root = loader.load();

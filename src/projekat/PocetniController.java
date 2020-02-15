@@ -16,6 +16,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
 import java.util.Optional;
+import java.util.ResourceBundle;
 
 import static javafx.scene.layout.Region.USE_PREF_SIZE;
 
@@ -47,7 +48,8 @@ public class PocetniController {
     public void dodajOsnivacaAction(ActionEvent actionEvent){
         try {
             Stage stage = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/clan.fxml"));
+            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/clan.fxml"),bundle);
             ClanController ctrl = new ClanController();
             loader.setController(ctrl);
             Parent root = loader.load();
@@ -228,7 +230,8 @@ public class PocetniController {
     private void otvoriGlavniProzor() {
         try {
             Stage stage = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/glavni.fxml"));
+            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/glavni.fxml"),bundle);
             GlavniController ctrl = new GlavniController();
             loader.setController(ctrl);
             Parent root = loader.load();

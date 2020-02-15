@@ -13,6 +13,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
 import static javafx.scene.layout.Region.USE_PREF_SIZE;
 
@@ -36,9 +37,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
 
         if(prviPut()){
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pocetni.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pocetni.fxml"),bundle);
             PocetniController ctrl = new PocetniController();
             loader.setController(ctrl);
             Parent root = loader.load();
@@ -46,7 +48,7 @@ public class Main extends Application {
             primaryStage.setScene(new Scene(root, USE_PREF_SIZE, USE_PREF_SIZE));
             primaryStage.show();
         }else{
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/login.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/login.fxml"),bundle);
             LoginController ctrl = new LoginController();
             loader.setController(ctrl);
             Parent root = loader.load();

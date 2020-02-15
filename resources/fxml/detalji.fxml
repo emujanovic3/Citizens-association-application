@@ -21,9 +21,9 @@
         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <Label text="Naziv:" />
-        <Label text="Vođa:" GridPane.rowIndex="1" />
-        <Label text="Opis:" GridPane.rowIndex="2" />
+        <Label text="%nazivDT" />
+        <Label text="%vodjaDT" GridPane.rowIndex="1" />
+        <Label text="%opisDT" GridPane.rowIndex="2" />
         <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="3">
             <buttons>
                 <Button mnemonicParsing="false" onAction="#okAction" text="OK" />

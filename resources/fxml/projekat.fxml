@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<?import java.net.URL?>
 <GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="250.0" vgap="10.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
     <stylesheets>
         <URL value="@/css/login.css" />
@@ -20,16 +20,16 @@
       <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label text="Naziv:" />
-      <Label text="Vođa:" GridPane.rowIndex="1" />
-      <Label text="Opis:" GridPane.rowIndex="2" />
+      <Label text="%nazivDT" />
+      <Label text="%vodjaDT" GridPane.rowIndex="1" />
+      <Label text="%opisDT" GridPane.rowIndex="2" />
       <TextField fx:id="nazivProjekat" GridPane.columnIndex="1" />
       <TextArea fx:id="opisProjekat" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <ChoiceBox fx:id="projekatChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="3">
         <buttons>
-          <Button mnemonicParsing="false" onAction="#dodajAction" text="Dodaj" />
-            <Button mnemonicParsing="false" onAction="#odustaniAction" text="Odustani" />
+          <Button mnemonicParsing="false" onAction="#dodajAction" text="%dodaj" />
+            <Button mnemonicParsing="false" onAction="#odustaniAction" text="%odustani" />
         </buttons>
       </ButtonBar>
    </children>

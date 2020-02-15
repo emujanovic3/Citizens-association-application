@@ -25,13 +25,13 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label text="Ime:" />
-      <Label text="Prezime:" GridPane.rowIndex="1" />
-      <Label text="Datum rođenja:" GridPane.rowIndex="2" />
-      <Label text="Adresa:" GridPane.rowIndex="3" />
-      <Label text="Grad:" GridPane.rowIndex="4" />
-      <Label text="Država:" GridPane.rowIndex="5" />
-      <Label text="Državljanstvo:" GridPane.rowIndex="6" />
+      <Label text="%imeDT" />
+      <Label text="%prezimeDT" GridPane.rowIndex="1" />
+      <Label text="%datumRodjenjaDT" GridPane.rowIndex="2" />
+      <Label text="%adresaDT" GridPane.rowIndex="3" />
+      <Label text="%gradDT" GridPane.rowIndex="4" />
+      <Label text="%drzavaDT" GridPane.rowIndex="5" />
+      <Label text="%drzavljanstvoDT" GridPane.rowIndex="6" />
       <TextField fx:id="imeClanField" GridPane.columnIndex="1" GridPane.columnSpan="2" />
       <TextField fx:id="prezimeClanField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
        <DatePicker fx:id="datePickerClan" promptText="Izaberi datum" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" />
@@ -39,11 +39,11 @@
       <TextField fx:id="gradClanField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
       <TextField fx:id="drzavaClanField" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
        <RadioButton fx:id="bihClanRadioBtn" mnemonicParsing="false" text="BIH" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-       <RadioButton fx:id="drugoClanRadioBtn" mnemonicParsing="false" text="Drugo" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+       <RadioButton fx:id="drugoClanRadioBtn" mnemonicParsing="false" text="%drugo" GridPane.columnIndex="2" GridPane.rowIndex="6" />
       <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="7">
         <buttons>
-          <Button mnemonicParsing="false" onAction="#dodajClanAction" text="Dodaj" />
-            <Button mnemonicParsing="false" onAction="#odustaniClanAction" text="Odustani" />
+          <Button mnemonicParsing="false" onAction="#dodajClanAction" text="%dodaj" />
+            <Button mnemonicParsing="false" onAction="#odustaniClanAction" text="%odustani" />
         </buttons>
       </ButtonBar>
    </children>

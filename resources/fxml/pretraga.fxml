@@ -18,9 +18,9 @@
     </rowConstraints>
     <children>
         <TextField fx:id="fldPretraga" />
-        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#searchAction" text="Traži" GridPane.columnIndex="1" />
+        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#searchAction" text="%trazi" GridPane.columnIndex="1" />
         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#okAction" text="OK" GridPane.columnIndex="2" />
-        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cancelAction" text="Odustani" GridPane.columnIndex="3" />
+        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cancelAction" text="%odustani" GridPane.columnIndex="3" />
         <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" GridPane.rowSpan="2147483647">
             <content>
                 <AnchorPane fx:id="anchorPane">

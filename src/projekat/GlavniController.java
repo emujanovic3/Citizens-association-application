@@ -60,8 +60,9 @@ public class GlavniController {
 
     public void dodajClanaAction(ActionEvent actionEvent){
         try {
+            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
             Stage stage = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/clan.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/clan.fxml"),bundle);
             ClanController ctrl = new ClanController();
             loader.setController(ctrl);
             Parent root = loader.load();
@@ -123,7 +124,8 @@ public class GlavniController {
     public void skupstinaAction(ActionEvent actionEvent){
         try {
             Stage stage = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/skupstina.fxml"));
+            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/skupstina.fxml"),bundle);
             SkupstinaController ctrl = new SkupstinaController();
             loader.setController(ctrl);
             Parent root = loader.load();
@@ -267,7 +269,8 @@ public class GlavniController {
     public void dodajProjekatAction(ActionEvent actionEvent){
         try {
             Stage stage = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/projekat.fxml"));
+            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/projekat.fxml"),bundle);
             ProjekatController ctrl = new ProjekatController(clanovi);
             loader.setController(ctrl);
             Parent root = loader.load();
@@ -325,7 +328,8 @@ public class GlavniController {
         }else{
             try {
                 Stage stage = new Stage();
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/detalji.fxml"));
+                ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/detalji.fxml"),bundle);
                 DetaljiController ctrl = new DetaljiController(p);
                 loader.setController(ctrl);
                 Parent root = loader.load();
@@ -492,7 +496,8 @@ public class GlavniController {
             Parent root = null;
             try {
                 Stage myStage = new Stage();
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pretraga.fxml"));
+                ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pretraga.fxml"),bundle);
                 PretragaController ctrl = new PretragaController();
                 loader.setController(ctrl);
                 root = loader.load();

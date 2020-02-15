@@ -28,35 +28,35 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label text="Udruženje građana:" GridPane.columnIndex="1">
+            <Label text="%udruzenjeGradjanaDT" GridPane.columnIndex="1">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label text="Članovi" GridPane.rowIndex="2">
+            <Label text="%clanoviDT" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font></Label>
             <TableView fx:id="clanoviTableView" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
               <columns>
-                <TableColumn fx:id="imeCol" prefWidth="90.0" text="Ime" />
-                <TableColumn fx:id="prezimeCol" prefWidth="90.0" text="Prezime" />
+                <TableColumn fx:id="imeCol" prefWidth="90.0" text="%ime" />
+                <TableColumn fx:id="prezimeCol" prefWidth="90.0" text="%prezime" />
               </columns>
             </TableView>
             <VBox prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2">
                <children>
-                  <Button mnemonicParsing="false" onAction="#dodajClanaAction" prefWidth="100.0" text="Dodaj člana" />
-                  <Button mnemonicParsing="false" onAction="#obrisiClanaAction" prefWidth="100.0" text="Obriši člana" />
-                  <Button mnemonicParsing="false" onAction="#skupstinaAction" prefWidth="120.0" text="Skupština" />
-                  <Button mnemonicParsing="false" onAction="#dodajSkupstinaAction" prefWidth="120.0" text="Dodaj u skupštinu" />
-                  <Button mnemonicParsing="false" onAction="#izbaciSkupstinaAction" prefWidth="120.0" text="Izbaci iz skupštine" />
-                  <Button mnemonicParsing="false" onAction="#promijeniPredsjednikaAction" text="Promijeni predsjednika" />
+                  <Button mnemonicParsing="false" onAction="#dodajClanaAction" prefWidth="100.0" text="%dodajClana" />
+                  <Button mnemonicParsing="false" onAction="#obrisiClanaAction" prefWidth="100.0" text="%obrisiClana" />
+                  <Button mnemonicParsing="false" onAction="#skupstinaAction" prefWidth="120.0" text="%skupstina" />
+                  <Button mnemonicParsing="false" onAction="#dodajSkupstinaAction" prefWidth="120.0" text="%dodajUSkupstinu" />
+                  <Button mnemonicParsing="false" onAction="#izbaciSkupstinaAction" prefWidth="120.0" text="%izbaciIzSkupstine" />
+                  <Button mnemonicParsing="false" onAction="#promijeniPredsjednikaAction" text="%promijeniPredsjednika" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
             </VBox>
-            <Label text="Predsjednik:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Label text="%predsjednikDT" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -66,21 +66,21 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label text="Projekti" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Label text="%projektiDT" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font></Label>
             <TableView fx:id="projektiTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
               <columns>
-                <TableColumn fx:id="nazivCol" minWidth="-Infinity" prefWidth="175.0" text="Naziv" />
+                <TableColumn fx:id="nazivCol" minWidth="-Infinity" prefWidth="175.0" text="%naziv" />
               </columns>
             </TableView>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2">
                <children>
-                  <Button mnemonicParsing="false" onAction="#dodajProjekatAction" text="Dodaj projekat" />
-                  <Button mnemonicParsing="false" onAction="#obrisiProjekatAction" text="Obriši  projekat" />
-                  <Button mnemonicParsing="false" onAction="#detaljiAction" text="Detalji projekta" />
-                  <Button mnemonicParsing="false" onAction="#promijeniVodjuAction" text="Promijeni vođu" />
+                  <Button mnemonicParsing="false" onAction="#dodajProjekatAction" text="%dodajProjekat" />
+                  <Button mnemonicParsing="false" onAction="#obrisiProjekatAction" text="%obrisiProjekat" />
+                  <Button mnemonicParsing="false" onAction="#detaljiAction" text="%detaljiProjekta" />
+                  <Button mnemonicParsing="false" onAction="#promijeniVodjuAction" text="%promijeniVodju" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -88,9 +88,9 @@
             </VBox>
             <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
               <buttons>
-                <Button mnemonicParsing="false" onAction="#promijeniNazivAction" text="Promijeni naziv" />
-                  <Button mnemonicParsing="false" onAction="#ugasiUdruzenjeAction" text="Ugasi udruženje" />
-                  <Button mnemonicParsing="false" onAction="#izadjiAction" text="Izađi" />
+                <Button mnemonicParsing="false" onAction="#promijeniNazivAction" text="%promijeniNaziv" />
+                  <Button mnemonicParsing="false" onAction="#ugasiUdruzenjeAction" text="%ugasiUdruzenje" />
+                  <Button mnemonicParsing="false" onAction="#izadjiAction" text="%izadji" />
               </buttons>
             </ButtonBar>
             <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#slikaAction" prefHeight="128.0" prefWidth="128.0" GridPane.rowSpan="2">
@@ -107,19 +107,14 @@
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu mnemonicParsing="false" text="%datoteka">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#izadjiAction" text="Close" />
+              <MenuItem mnemonicParsing="false" onAction="#izadjiAction" text="%zatvori" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
+          <Menu mnemonicParsing="false" text="%pomoc">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem mnemonicParsing="false" text="%oNama" />
             </items>
           </Menu>
         </menus>

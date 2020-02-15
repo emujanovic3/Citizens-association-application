@@ -51,7 +51,7 @@
       <Label text="Korisničko ime:" GridPane.rowIndex="5" />
       <Label text="Šifra:" GridPane.rowIndex="6" />
       <TextField fx:id="kImeField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-      <PasswordField fx:id="sifraField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <TextField fx:id="sifraField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
        <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="7">
            <buttons>
                <Button mnemonicParsing="false" onAction="#napraviAction" text="Napravi udruženje" />

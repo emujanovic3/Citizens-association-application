@@ -16,7 +16,6 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
 import java.util.Optional;
-import java.util.Scanner;
 
 import static javafx.scene.layout.Region.USE_PREF_SIZE;
 

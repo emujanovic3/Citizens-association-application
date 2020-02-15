@@ -93,7 +93,7 @@
                   <Button mnemonicParsing="false" onAction="#izadjiAction" text="Izađi" />
               </buttons>
             </ButtonBar>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" GridPane.rowSpan="2">
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#slikaAction" prefHeight="128.0" prefWidth="128.0" GridPane.rowSpan="2">
                <graphic>
                   <ImageView fx:id="slika" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>

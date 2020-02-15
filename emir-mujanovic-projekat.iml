@@ -10,5 +10,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="org.xerial:sqlite-jdbc:3.21.0" level="project" />
+    <orderEntry type="library" name="at.mukprojects:giphy4j:1.0.1" level="project" />
   </component>
 </module>

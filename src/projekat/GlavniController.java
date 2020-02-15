@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 import java.io.*;
 import java.util.*;
 
+import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 import static javafx.scene.layout.Region.USE_PREF_SIZE;
 
 public class GlavniController {
@@ -444,6 +445,82 @@ public class GlavniController {
 
     public void izadjiAction(ActionEvent actionEvent){
         System.exit(0);
+    }
+
+    public void slikaAction(ActionEvent actionEvent){
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Promjena slike");
+        alert.setHeaderText(null);
+        alert.setContentText("Odakle želite izabrati sliku");
+
+        ButtonType buttonTypeOne = new ButtonType("Računar");
+        ButtonType buttonTypeTwo = new ButtonType("Internet");
+        ButtonType buttonTypeCancel = new ButtonType("Odustani", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+        alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo, buttonTypeCancel);
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == buttonTypeOne){
+            // ... user chose "One"
+            TextInputDialog dialog = new TextInputDialog("");
+            dialog.setTitle("Slika");
+            dialog.setHeaderText(null);
+            dialog.setContentText("Unesite put do slike:");
+
+// Traditional way to get the response value.
+            Optional<String> result2 = dialog.showAndWait();
+            if (result.isPresent()){
+                File novaSlika = new File(result2.get());
+
+                PrintWriter izlaz;
+                try {
+                    izlaz = new PrintWriter(new FileWriter("slika.txt"));
+                    File s = new File("resources/img/etf.png");
+
+                    izlaz.println(novaSlika.toURI());
+                    izlaz.close();
+                    slika.setImage(new Image(ucitajSliku(),128,128,false,false));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+// The Java 8 way to get the response value (with lambda expression).
+            //result.ifPresent(name -> System.out.println("Your name: " + name));
+        } else if (result.get() == buttonTypeTwo) {
+            // ... user chose "Two"
+            Parent root = null;
+            try {
+                Stage myStage = new Stage();
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pretraga.fxml"));
+                PretragaController ctrl = new PretragaController();
+                loader.setController(ctrl);
+                root = loader.load();
+                myStage.setTitle("Preteraga");
+                myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+                myStage.show();
+                myStage.setOnHiding(windowEvent -> {
+                    String adresa = ctrl.getAdresa();
+                    if(adresa!=null){
+                        PrintWriter izlaz;
+                        try {
+                            izlaz = new PrintWriter(new FileWriter("slika.txt"));
+                            File s = new File("resources/img/etf.png");
+
+                            izlaz.println(adresa);
+                            izlaz.close();
+                            slika.setImage(new Image(ucitajSliku(),128,128,false,false));
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            // ... user chose CANCEL or closed the dialog
+        }
     }
 
     private String ucitajNaziv(){

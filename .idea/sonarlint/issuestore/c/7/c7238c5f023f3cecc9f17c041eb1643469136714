@@ -1,8 +1,8 @@
 
 Rsquid:EmptyStatementUsageCheck2"Remove this empty statement.(Ñâ³¼ıÿÿÿÿ8‰®òœ„.
-“"squid:ClassVariableVisibilityCheck"YMake nazivProjekat a static final constant or non-public and provide accessors if needed.(»Ş‹øÿÿÿÿ8®Æœ„.
-"squid:ClassVariableVisibilityCheck"XMake opisProjekat a static final constant or non-public and provide accessors if needed.(õÍÑä8®Æœ„.
-lsquid:S1192""NDefine a constant instead of duplicating this literal "poljeIspravno" 6 times.(”°‰8‰®òœ„.
 Rsquid:EmptyStatementUsageCheck "Remove this empty statement.(µš£¡ûÿÿÿÿ8í²ñœ„.
+“"squid:ClassVariableVisibilityCheck"YMake nazivProjekat a static final constant or non-public and provide accessors if needed.(»Ş‹øÿÿÿÿ8®Æœ„.
 —"squid:ClassVariableVisibilityCheck"]Make projekatChoiceBox a static final constant or non-public and provide accessors if needed.(›Â«úÿÿÿÿ8®Æœ„.
 ssquid:S1192!"PDefine a constant instead of duplicating this literal "poljeNeispravno" 6 times.(Êàşùÿÿÿÿ8‰®òœ„.
+lsquid:S1192""NDefine a constant instead of duplicating this literal "poljeIspravno" 6 times.(”°‰8‰®òœ„.
+"squid:ClassVariableVisibilityCheck"XMake opisProjekat a static final constant or non-public and provide accessors if needed.(õÍÑä8®Æœ„.

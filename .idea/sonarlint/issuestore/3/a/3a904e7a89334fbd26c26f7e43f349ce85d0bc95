@@ -1,11 +1,11 @@
 
-Ssquid:S1481"6Remove this unused "dajSveClanoveUpit" local variable.(œƒ°:8àéû‚.
-_squid:UselessImportCheck	"/Remove this unused import 'java.io.FileWriter'.(Ã‘ÅÃıÿÿÿÿ8óÂ½ôƒ.
-lsquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œƒ°:8àéû‚.
+ksquid:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(–Æƒƒüÿÿÿÿ8àéû‚.
 Lsquid:S2115")Add password protection to this database.(–Æƒƒüÿÿÿÿ8àéû‚.
 Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8àéû‚.
 _squid:S2259"BA "NullPointerException" could be thrown; "conn" is nullable here.(œƒ°:8àéû‚.
-ksquid:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(–Æƒƒüÿÿÿÿ8àéû‚.
+[squid:UselessImportCheck"0Remove this unused import 'java.io.PrintWriter'.(ÓŞÏÛ8óÂ½ôƒ.
+lsquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œƒ°:8àéû‚.
+Ssquid:S1481"6Remove this unused "dajSveClanoveUpit" local variable.(œƒ°:8àéû‚.
+_squid:UselessImportCheck	"/Remove this unused import 'java.io.FileWriter'.(Ã‘ÅÃıÿÿÿÿ8óÂ½ôƒ.
 `squid:UselessImportCheck
 "0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8óÂ½ôƒ.
-[squid:UselessImportCheck"0Remove this unused import 'java.io.PrintWriter'.(ÓŞÏÛ8óÂ½ôƒ.

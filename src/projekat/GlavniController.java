@@ -334,6 +334,47 @@ public class GlavniController {
         }
     }
 
+    public void promijeniVodjuAction(ActionEvent actionEvent){
+        Projekat p = projektiTableView.getSelectionModel().getSelectedItem();
+
+        if(p==null){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Obavještenje");
+            alert.setHeaderText(null);
+            alert.setContentText("Niste izabrali nijedan projekat!");
+
+            alert.showAndWait();
+        }else{
+            List<Clan> choices = new ArrayList<>();
+
+            for(Clan x:clanovi){
+                choices.add(x);
+            }
+
+            ChoiceDialog<Clan> dialog = new ChoiceDialog<>(null, choices);
+            dialog.setTitle("Promjena vođe");
+            dialog.setHeaderText(null);
+            dialog.setContentText("Izaberite vođu:");
+
+            Optional<Clan> result = dialog.showAndWait();
+            if (result.isPresent()){
+                Clan noviV = new Clan(result.get());
+
+                projekti.remove(p);
+                p.setVodja(noviV);
+                projekti.add(p);
+                dao.promijeniProjekat(p);
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Obavještenje");
+                alert.setHeaderText(null);
+                alert.setContentText("Izabrana osoba je sada vođa!");
+
+                alert.showAndWait();
+            }
+        }
+    }
+
     private String ucitajNaziv(){
         Scanner ulaz;
         try {

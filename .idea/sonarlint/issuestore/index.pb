@@ -53,3 +53,7 @@ T
 $src/projekat/ProjekatController.java,c\7\c7238c5f023f3cecc9f17c041eb1643469136714
 L
 resources/fxml/projekat.fxml,3\3\33ef99bff5fc4c64288b8128d5d80fd40dec7f37
+K
+resources/fxml/detalji.fxml,0\5\05783712319924120eca3b02ddef83fa2178f339
+S
+#src/projekat/DetaljiController.java,2\2\2275146f92f4c3c8bfd6570a8ac2b6bab788e6ba

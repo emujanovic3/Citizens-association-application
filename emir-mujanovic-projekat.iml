@@ -29,5 +29,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="org.junit.vintage:junit-vintage-engine:5.6.0" level="project" />
   </component>
 </module>

@@ -126,7 +126,7 @@
           </Menu>
           <Menu mnemonicParsing="false" text="%pomoc">
             <items>
-              <MenuItem mnemonicParsing="false" text="%oNama" />
+              <MenuItem mnemonicParsing="false" onAction="#oNamaAction" text="%oNama" />
             </items>
           </Menu>
         </menus>

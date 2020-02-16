@@ -559,6 +559,23 @@ public class GlavniController {
 
     }
 
+    public void oNamaAction(ActionEvent actionEvent){
+        Parent root = null;
+        try {
+            Stage myStage = new Stage();
+            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/about.fxml"),bundle);
+            AboutController ctrl = new AboutController();
+            loader.setController(ctrl);
+            root = loader.load();
+            myStage.setTitle(bundle.getString("aboutTitle"));
+            myStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+            myStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void printajProjekteAction(ActionEvent actionEvent){
         try {
             new PrintReportProjekti().showReport(dao.getConn());

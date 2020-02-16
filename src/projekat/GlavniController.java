@@ -33,7 +33,6 @@ public class GlavniController {
     private String naziv;
     private ObservableList<Clan> clanovi = FXCollections.observableArrayList(dao.dajSveClanove());
     private ObservableList<Projekat> projekti = FXCollections.observableArrayList(dao.dajSveProjekte());
-    private ResourceBundle bundle = ResourceBundle.getBundle("Translation");
 
     public GlavniController() {
         naziv = ucitajNaziv();
@@ -41,6 +40,7 @@ public class GlavniController {
 
     @FXML
     public void initialize(){
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
         nazivLabel.setText("\"" + naziv +"\"");
         for(Clan x: clanovi){
             if(x instanceof Predsjednik){
@@ -61,6 +61,7 @@ public class GlavniController {
 
     public void dodajClanaAction(ActionEvent actionEvent){
         try {
+            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
             Stage stage = new Stage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/clan.fxml"),bundle);
             ClanController ctrl = new ClanController();
@@ -85,6 +86,7 @@ public class GlavniController {
 
     public void obrisiClanaAction(ActionEvent actionEvent){
         Clan zaBrisanje = clanoviTableView.getSelectionModel().getSelectedItem();
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
         if(zaBrisanje instanceof Predsjednik){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle(bundle.getString("obavjestenje"));
@@ -124,6 +126,7 @@ public class GlavniController {
     public void skupstinaAction(ActionEvent actionEvent){
         try {
             Stage stage = new Stage();
+            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/skupstina.fxml"),bundle);
             SkupstinaController ctrl = new SkupstinaController();
             loader.setController(ctrl);
@@ -138,7 +141,7 @@ public class GlavniController {
 
     public void dodajSkupstinaAction(ActionEvent actionEvent){
         Clan clan = clanoviTableView.getSelectionModel().getSelectedItem();
-
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
         if(clan instanceof Predsjednik){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle(bundle.getString("obavjestenje"));
@@ -179,7 +182,7 @@ public class GlavniController {
 
     public void izbaciSkupstinaAction(ActionEvent actionEvent){
         Clan clan = clanoviTableView.getSelectionModel().getSelectedItem();
-
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
         if(clan instanceof Predsjednik){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle(bundle.getString("obavjestenje"));
@@ -229,6 +232,8 @@ public class GlavniController {
             }
         }
 
+
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
         ChoiceDialog<Clan> dialog = new ChoiceDialog<>(null, choices);
         dialog.setTitle(bundle.getString("promjenaPredsjednika"));
         dialog.setHeaderText(null);
@@ -268,6 +273,7 @@ public class GlavniController {
     public void dodajProjekatAction(ActionEvent actionEvent){
         try {
             Stage stage = new Stage();
+            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/projekat.fxml"),bundle);
             ProjekatController ctrl = new ProjekatController(clanovi);
             loader.setController(ctrl);
@@ -291,6 +297,7 @@ public class GlavniController {
 
     public void obrisiProjekatAction(ActionEvent actionEvent){
         Projekat zaBrisanje = projektiTableView.getSelectionModel().getSelectedItem();
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
 
         if(zaBrisanje==null){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -315,6 +322,7 @@ public class GlavniController {
 
     public void detaljiAction(ActionEvent actionEvent){
         Projekat p = projektiTableView.getSelectionModel().getSelectedItem();
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
 
         if(p==null){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -341,6 +349,7 @@ public class GlavniController {
 
     public void promijeniVodjuAction(ActionEvent actionEvent){
         Projekat p = projektiTableView.getSelectionModel().getSelectedItem();
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
 
         if(p==null){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -381,6 +390,8 @@ public class GlavniController {
     }
 
     public void promijeniNazivAction(ActionEvent actionEvent){
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+
         TextInputDialog dialog = new TextInputDialog("");
         dialog.setTitle(bundle.getString("promjenaNaziva"));
         dialog.setHeaderText(null);
@@ -426,6 +437,8 @@ public class GlavniController {
     }
 
     public void ugasiUdruzenjeAction(ActionEvent actionEvent){
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle(bundle.getString("gasenjeUdruzenja"));
         alert.setHeaderText(null);
@@ -449,6 +462,8 @@ public class GlavniController {
     }
 
     public void slikaAction(ActionEvent actionEvent){
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle(bundle.getString("promjenaSlike"));
         alert.setHeaderText(null);
@@ -524,6 +539,16 @@ public class GlavniController {
         }
     }
 
+    public void bosanskiAction(ActionEvent actionEvent){
+        Locale.setDefault(new Locale("bs","BA"));
+        restart();
+    }
+
+    public void engleskiAction(ActionEvent actionEvent){
+        Locale.setDefault(new Locale("en","US"));
+        restart();
+    }
+
     private String ucitajNaziv(){
         Scanner ulaz;
         try {
@@ -569,6 +594,20 @@ public class GlavniController {
         } catch (FileNotFoundException e) {
             System.out.println("Datoteka slika.txt ne postoji ili se ne može otvoriti");
             return null;
+        }
+    }
+
+    private void restart(){
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+
+        Stage prozor = (Stage) projektiTableView.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/glavni.fxml"),bundle);
+        loader.setController(this);
+
+        try {
+            prozor.setScene(new Scene(loader.load()));
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

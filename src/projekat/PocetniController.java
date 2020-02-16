@@ -34,7 +34,6 @@ public class PocetniController {
     public TextField sifraField;
 
     private ArrayList<Clan> osnivaci = new ArrayList<>();
-    private ResourceBundle bundle = ResourceBundle.getBundle("Translation");
 
     @FXML
     public void initialize(){
@@ -49,6 +48,7 @@ public class PocetniController {
     public void dodajOsnivacaAction(ActionEvent actionEvent){
         try {
             Stage stage = new Stage();
+            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/clan.fxml"),bundle);
             ClanController ctrl = new ClanController();
             loader.setController(ctrl);
@@ -71,6 +71,7 @@ public class PocetniController {
 
     public void brisiOsnivacaAction(ActionEvent actionEvent){
         Clan zaBrisanje = osnivaciTableView.getSelectionModel().getSelectedItem();
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
 
         if(zaBrisanje!=null){
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -135,7 +136,7 @@ public class PocetniController {
         }
 
         if(sveOk){
-
+            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
                 try {
                     if(osnivaci.size()<3) {
                         throw new NeispravniOsnivaciException(bundle.getString("potrebnaSuNajmanjeTriOsnivaca"));
@@ -230,6 +231,7 @@ public class PocetniController {
     private void otvoriGlavniProzor() {
         try {
             Stage stage = new Stage();
+            ResourceBundle bundle = ResourceBundle.getBundle("Translation");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/glavni.fxml"),bundle);
             GlavniController ctrl = new GlavniController();
             loader.setController(ctrl);

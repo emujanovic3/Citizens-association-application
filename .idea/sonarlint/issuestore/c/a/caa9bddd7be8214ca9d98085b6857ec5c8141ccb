@@ -1,62 +1,66 @@
 
-lsquid:S1192Z"ODefine a constant instead of duplicating this literal "ObavjeÅ¡tenje" 15 times.(ˆáÁ8¿øĞ„.
-Vsquid:S1172‚"2Remove this unused method parameter "actionEvent".(‘™ÏÒûÿÿÿÿ8¿øĞ„.
-Vsquid:S1172Ù"2Remove this unused method parameter "actionEvent".(Ç›£ªıÿÿÿÿ8¿øĞ„.
-Vsquid:S1172"2Remove this unused method parameter "actionEvent".(œ¼©úıÿÿÿÿ8¿øĞ„.
-Qsquid:S1172¯"2Remove this unused method parameter "actionEvent".(à¥Ü8¿øĞ„.
-msquid:S2095á"IUse try-with-resources or close this "PrintWriter" in a "finally" clause.(´Œƒùøÿÿÿÿ8¿øĞ„.
-’"squid:ClassVariableVisibilityCheck"]Make projektiTableView a static final constant or non-public and provide accessors if needed.(èñº³8¿øĞ„.
-€squid:S1192­"aDefine a constant instead of duplicating this literal "Niste izabrali nijedan projekat!" 3 times.(¿É˜8¿øĞ„.
-jsquid:CommentedOutCodeLine¬"<This block of commented-out lines of code should be removed.( Œô8¿øĞ„.
-Ssquid:S3655i"5Call "result.isPresent()" before accessing the value.(ÃÇûŞ8¿øĞ„.
-W
-squid:S106§"9Replace this use of System.out or System.err by a logger.(ÙœéÄ8¿øĞ„.
-osquid:CommentedOutCodeLineŠ"<This block of commented-out lines of code should be removed.(§Â·­úÿÿÿÿ8¿øĞ„.
-"squid:ClassVariableVisibilityCheck"[Make imePredsjednika a static final constant or non-public and provide accessors if needed.(ÊÛ‡8¿øĞ„.
-Qsquid:S1135ù"2Complete the task associated to this TODO comment.(ş¥äî8¿øĞ„.
-–"squid:ClassVariableVisibilityCheck"\Make clanoviTableView a static final constant or non-public and provide accessors if needed.(»Å‡¦øÿÿÿÿ8¿øĞ„.
-nsquid:S1192á"JDefine a constant instead of duplicating this literal "slika.txt" 3 times.(´Œƒùøÿÿÿÿ8¿øĞ„.
-Rsquid:S1611˜"3Remove the parentheses around the "event" parameter(Ú‹”à8¿øĞ„.
-Usquid:S1172|"2Remove this unused method parameter "actionEvent".(¬Ùª§ûÿÿÿÿ8¿øĞ„.
-Vsquid:S1172¾"2Remove this unused method parameter "actionEvent".(à¬î’ûÿÿÿÿ8¿øĞ„.
-Qsquid:S1172Æ"2Remove this unused method parameter "actionEvent".(áÀ¬8¿øĞ„.
-Nsquid:S1481‘"/Remove this unused "stariNaziv" local variable.(Œ·øå8¿øĞ„.
-jsquid:CommentedOutCodeLineí"<This block of commented-out lines of code should be removed.( Œô8¿øĞ„.
-Qsquid:S1172Â"2Remove this unused method parameter "actionEvent".(£÷…8¿øĞ„.
-Gsquid:S1148ˆ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¿øĞ„.
-Gsquid:S1148Œ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¿øĞ„.
-Gsquid:S1148è"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¿øĞ„.
-‡"squid:ClassVariableVisibilityCheck"RMake imeCol a static final constant or non-public and provide accessors if needed.(ïèµÂ8¿øĞ„.
-Vsquid:S1172µ"2Remove this unused method parameter "actionEvent".(æÍÒ§úÿÿÿÿ8¿øĞ„.
-Vsquid:S1172¦"2Remove this unused method parameter "actionEvent".(¸·Û”ûÿÿÿÿ8¿øĞ„.
-\
-squid:S106™"9Replace this use of System.out or System.err by a logger.(áçÔùÿÿÿÿ8¿øĞ„.
-Fsquid:S1148R"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¿øĞ„.
-Esquid:S1481"&Remove this unused "s" local variable.(Í–äÃ8¿øĞ„.
-Tsquid:S3655¶"5Call "result.isPresent()" before accessing the value.(ÃÇûŞ8¿øĞ„.
-Usquid:S1172V"2Remove this unused method parameter "actionEvent".(é¹Ôæùÿÿÿÿ8¿øĞ„.
-vsquid:S1192"RDefine a constant instead of duplicating this literal "osnivacki_akt.txt" 3 times.(…·í×şÿÿÿÿ8¿øĞ„.
-Gsquid:S1148‡"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¿øĞ„.
-Gsquid:S1148¢"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¿øĞ„.
-Vsquid:S1172Œ"2Remove this unused method parameter "actionEvent".(ˆÃ€¬ıÿÿÿÿ8¿øĞ„.
-‹"squid:ClassVariableVisibilityCheck"QMake slika a static final constant or non-public and provide accessors if needed.(Ø»Âßùÿÿÿÿ8¿øĞ„.
-hsquid:HiddenFieldCheck—"9Rename "naziv" which hides the field declared at line 33.(Û§ê¢ÿÿÿÿÿ8¿øĞ„.
-\
-squid:S106›"9Replace this use of System.out or System.err by a logger.(áçÔùÿÿÿÿ8¿øĞ„.
-qsquid:S3776Æ"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(áÀ¬8¿øĞ„.
-W
-squid:S106¾"9Replace this use of System.out or System.err by a logger.(ÈÍíÂ8¿øĞ„.
-jsquid:S1192?"LDefine a constant instead of duplicating this literal "Translation" 5 times.(“òáĞ8ËŒûĞ„.
-Gsquid:S1148Ô"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¿øĞ„.
-^
-squid:S899º";Do something with the "boolean" value returned by "delete".(Çì¥ğıÿÿÿÿ8¿øĞ„.
 ‹"squid:ClassVariableVisibilityCheck"VMake prezimeCol a static final constant or non-public and provide accessors if needed.(¿õ¦Ş8¿øĞ„.
-Esquid:S1481â"&Remove this unused "s" local variable.(Í–äÃ8¿øĞ„.
-hsquid:HiddenFieldCheckº"9Rename "naziv" which hides the field declared at line 33.(Û§ê¢ÿÿÿÿÿ8¿øĞ„.
-"squid:ClassVariableVisibilityCheck"VMake nazivLabel a static final constant or non-public and provide accessors if needed.(ÜéáÁøÿÿÿÿ8¿øĞ„.
-Qsquid:S1611H"3Remove the parentheses around the "event" parameter(Ú‹”à8¿øĞ„.
-msquid:S4042º"IUse "java.nio.Files#delete" here for better messages on error conditions.(Çì¥ğıÿÿÿÿ8¿øĞ„.
-Ysquid:S3655Ó"5Call "result.isPresent()" before accessing the value.(çŠë¿ıÿÿÿÿ8¿øĞ„.
+Qsquid:S1172Ğ"2Remove this unused method parameter "actionEvent".(áÀ¬8¿øĞ„.
+W
+squid:S106Ó"9Replace this use of System.out or System.err by a logger.(ÈÍíÂ8¿øĞ„.
+Fsquid:S1148S"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¿øĞ„.
+’"squid:ClassVariableVisibilityCheck"]Make projektiTableView a static final constant or non-public and provide accessors if needed.(èñº³8¿øĞ„.
+ksquid:S1192+"MDefine a constant instead of duplicating this literal "Translation" 15 times.(“òáĞ8İñÛ„.
+^
+squid:S899Ä";Do something with the "boolean" value returned by "delete".(Çì¥ğıÿÿÿÿ8¿øĞ„.
+Qsquid:S1172£"2Remove this unused method parameter "actionEvent".(øÎ³Ù8àŞÁÚ„.
+Qsquid:S1172Ì"2Remove this unused method parameter "actionEvent".(£÷…8¿øĞ„.
 ‰"squid:ClassVariableVisibilityCheck"TMake nazivCol a static final constant or non-public and provide accessors if needed.(¾ø­•8¿øĞ„.
-Usquid:S1172="2Remove this unused method parameter "actionEvent".(²ßäŞùÿÿÿÿ8¿øĞ„.
-Vsquid:S1172Ş"2Remove this unused method parameter "actionEvent".(ˆÓ•ıÿÿÿÿ8¿øĞ„.
+Gsquid:S1148Ù"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¿øĞ„.
+–"squid:ClassVariableVisibilityCheck"\Make clanoviTableView a static final constant or non-public and provide accessors if needed.(»Å‡¦øÿÿÿÿ8¿øĞ„.
+Vsquid:S1172ª"2Remove this unused method parameter "actionEvent".(¸·Û”ûÿÿÿÿ8¿øĞ„.
+"squid:ClassVariableVisibilityCheck"[Make imePredsjednika a static final constant or non-public and provide accessors if needed.(ÊÛ‡8¿øĞ„.
+Tsquid:S3655À"5Call "result.isPresent()" before accessing the value.(ÃÇûŞ8¿øĞ„.
+Qsquid:S1611I"3Remove the parentheses around the "event" parameter(Ú‹”à8¿øĞ„.
+W
+squid:S106¯"9Replace this use of System.out or System.err by a logger.(ÙœéÄ8¿øĞ„.
+Esquid:S1481Œ"&Remove this unused "s" local variable.(Í–äÃ8¿øĞ„.
+\
+squid:S106¡"9Replace this use of System.out or System.err by a logger.(áçÔùÿÿÿÿ8¿øĞ„.
+jsquid:CommentedOutCodeLine´"<This block of commented-out lines of code should be removed.( Œô8¿øĞ„.
+hsquid:HiddenFieldCheckÏ"9Rename "naziv" which hides the field declared at line 33.(Û§ê¢ÿÿÿÿÿ8¿øĞ„.
+zsquid:S1192•"[Define a constant instead of duplicating this literal "izabranaOsobaJePredsjednik" 3 times.(½é„˜8Ú™‘Ù„.
+qsquid:S1192\"NDefine a constant instead of duplicating this literal "obavjestenje" 15 times.(ä¤»„øÿÿÿÿ8¬œîØ„.
+Gsquid:S1148’"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¿øĞ„.
+Ysquid:S3655ß"5Call "result.isPresent()" before accessing the value.(çŠë¿ıÿÿÿÿ8¿øĞ„.
+Gsquid:S1148—"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¿øĞ„.
+Vsquid:S1172‘"2Remove this unused method parameter "actionEvent".(œ¼©úıÿÿÿÿ8¿øĞ„.
+Ssquid:S3655k"5Call "result.isPresent()" before accessing the value.(ÃÇûŞ8¿øĞ„.
+jsquid:CommentedOutCodeLineù"<This block of commented-out lines of code should be removed.( Œô8¿øĞ„.
+‹"squid:ClassVariableVisibilityCheck"QMake slika a static final constant or non-public and provide accessors if needed.(Ø»Âßùÿÿÿÿ8¿øĞ„.
+|squid:S1192²"]Define a constant instead of duplicating this literal "nisteIzabraliNijedanProjekat" 3 times.(İšø»8Ç©ŸÙ„.
+Rsquid:S1611œ"3Remove the parentheses around the "event" parameter(Ú‹”à8¿øĞ„.
+msquid:S2095í"IUse try-with-resources or close this "PrintWriter" in a "finally" clause.(´Œƒùøÿÿÿÿ8¿øĞ„.
+Vsquid:S1172"2Remove this unused method parameter "actionEvent".(˜¼ÇÁùÿÿÿÿ8àŞÁÚ„.
+qsquid:S3776Ğ"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(áÀ¬8¿øĞ„.
+Usquid:S1172W"2Remove this unused method parameter "actionEvent".(é¹Ôæùÿÿÿÿ8¿øĞ„.
+Vsquid:S1172ˆ"2Remove this unused method parameter "actionEvent".(‘™ÏÒûÿÿÿÿ8¿øĞ„.
+nsquid:S1192í"JDefine a constant instead of duplicating this literal "slika.txt" 3 times.(´Œƒùøÿÿÿÿ8¿øĞ„.
+Vsquid:S1172"2Remove this unused method parameter "actionEvent".(ˆÃ€¬ıÿÿÿÿ8¿øĞ„.
+Gsquid:S1148Š"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¿øĞ„.
+hsquid:HiddenFieldCheck¬"9Rename "naziv" which hides the field declared at line 33.(Û§ê¢ÿÿÿÿÿ8¿øĞ„.
+Vsquid:S1172Ş"2Remove this unused method parameter "actionEvent".(Ç›£ªıÿÿÿÿ8¿øĞ„.
+Vsquid:S1172à"2Remove this unused method parameter "actionEvent".(ˆÓ•ıÿÿÿÿ8¿øĞ„.
+Gsquid:S1148ô"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¿øĞ„.
+msquid:S4042Ä"IUse "java.nio.Files#delete" here for better messages on error conditions.(Çì¥ğıÿÿÿÿ8¿øĞ„.
+vsquid:S1192˜"RDefine a constant instead of duplicating this literal "osnivacki_akt.txt" 3 times.(…·í×şÿÿÿÿ8¿øĞ„.
+Esquid:S1481î"&Remove this unused "s" local variable.(Í–äÃ8¿øĞ„.
+Qsquid:S1172·"2Remove this unused method parameter "actionEvent".(à¥Ü8¿øĞ„.
+Usquid:S1172~"2Remove this unused method parameter "actionEvent".(¬Ùª§ûÿÿÿÿ8¿øĞ„.
+\
+squid:S106°"9Replace this use of System.out or System.err by a logger.(áçÔùÿÿÿÿ8¿øĞ„.
+Vsquid:S1172Ã"2Remove this unused method parameter "actionEvent".(à¬î’ûÿÿÿÿ8¿øĞ„.
+osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(§Â·­úÿÿÿÿ8¿øĞ„.
+"squid:ClassVariableVisibilityCheck"VMake nazivLabel a static final constant or non-public and provide accessors if needed.(ÜéáÁøÿÿÿÿ8¿øĞ„.
+Gsquid:S1148¦"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¿øĞ„.
+Gsquid:S1148â"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¾©¾Ú„.
+Nsquid:S1481™"/Remove this unused "stariNaziv" local variable.(Œ·øå8¿øĞ„.
+Usquid:S1172>"2Remove this unused method parameter "actionEvent".(²ßäŞùÿÿÿÿ8¿øĞ„.
+Qsquid:S1135ı"2Complete the task associated to this TODO comment.(ş¥äî8¿øĞ„.
+Vsquid:S1172·"2Remove this unused method parameter "actionEvent".(æÍÒ§úÿÿÿÿ8¿øĞ„.
+‡"squid:ClassVariableVisibilityCheck"RMake imeCol a static final constant or non-public and provide accessors if needed.(ïèµÂ8¿øĞ„.

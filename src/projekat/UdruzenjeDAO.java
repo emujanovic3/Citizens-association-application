@@ -317,4 +317,9 @@ public class UdruzenjeDAO {
         }
 
     }
+
+    public Connection getConn() {
+        return conn;
+    }
 }
+

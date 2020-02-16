@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Izvjestaj2Projekat" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a1f690a3-5977-4467-85f8-6b0bcd5b7210">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[cHJvamVrYXQgLDE1LDE1LDE2MmVkYTA5LTQ0YzItNDJhZi1hMDc5LTQ2NjNmYWRhNTlkODtjbGFu
+ICwxMTAsMjgsYTI3ZWIzYzUtMWVhZi00OWUzLTgxMzctNDY5ODI5ZmM1NmM1Ow==]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapterProjekat.xml"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT projekat.naziv,
+	clan.ime || ' ' || clan.prezime AS vodja
+FROM projekat,
+	clan
+WHERE 
+	 projekat.vodja = clan.id]]>
+	</queryString>
+	<field name="naziv" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="naziv"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="projekat"/>
+	</field>
+	<field name="vodja" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="vodja"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="420" height="33" uuid="6f9c1004-6140-4588-9c4f-d75824835765"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Lista projekata/Project list]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="544e89f7-0fd1-4142-aa23-e335e3be7007"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="277" height="15" uuid="d389d4a7-2eea-47e8-b3c1-9dd2b785022b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0ce32dd2-0c68-469f-898d-0efde34a8269"/>
+				</reportElement>
+				<text><![CDATA[naziv]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="277" y="19" width="277" height="15" uuid="8d5794e2-4b2b-402b-bdbe-b7aac809ae21">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f68d9dd3-9eca-42f1-9f00-a88f3fb56ac5"/>
+				</reportElement>
+				<text><![CDATA[vodja]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="cb229859-ab9a-4aa3-afa2-84439642f4ee"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="277" height="15" uuid="9d3d04a4-3590-47ef-a7d7-686f74c0303a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0ce32dd2-0c68-469f-898d-0efde34a8269"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{naziv}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="277" y="0" width="277" height="15" uuid="a4300b73-beb8-432e-9fef-1a1add79f0ae">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f68d9dd3-9eca-42f1-9f00-a88f3fb56ac5"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{vodja}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="401e0e59-de38-4dd2-8257-418cb489177c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

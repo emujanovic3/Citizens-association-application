@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="IzvjestajProjekat" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a1f690a3-5977-4467-85f8-6b0bcd5b7210">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value="Y2xhbiAsMTUsMTUsZDNkMWRmY2EtZDljYy00MWJjLWJlNDctNmZmMGM4YjZmMDcwOw=="/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapterProjekat.xml"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT clan.ime,
+	clan.prezime,
+	clan.adresa_stanovanja,
+	clan.grad,
+	clan.drzava
+FROM clan]]>
+	</queryString>
+	<field name="ime" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="ime"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="clan"/>
+	</field>
+	<field name="prezime" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="prezime"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="clan"/>
+	</field>
+	<field name="adresa_stanovanja" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="adresa_stanovanja"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="clan"/>
+	</field>
+	<field name="grad" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="grad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="clan"/>
+	</field>
+	<field name="drzava" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="drzava"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="clan"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="420" height="33" uuid="6f9c1004-6140-4588-9c4f-d75824835765"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Lista članova/Member list]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="544e89f7-0fd1-4142-aa23-e335e3be7007"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="111" height="15" uuid="c606d2cd-e13c-4536-8530-49d38aa88ce0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="63c0bc94-27dc-48aa-8a2a-8eb28b70c9d1"/>
+				</reportElement>
+				<text><![CDATA[ime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="111" y="19" width="111" height="15" uuid="cf2121fb-b141-4a82-a04c-43f66a53e12d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a17e2409-a7ee-45ef-9ea2-ee7bd70c2d3f"/>
+				</reportElement>
+				<text><![CDATA[prezime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="222" y="19" width="111" height="15" uuid="0ccac044-2004-45ec-b404-ca3bd261519f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="21e3d30f-7ee6-4cd3-9596-b8212b01cf3f"/>
+				</reportElement>
+				<text><![CDATA[adresa_stanovanja]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="333" y="19" width="111" height="15" uuid="d255ed56-3eaa-4ec1-b602-cb4171949d8b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="57d11da5-b709-447f-88b9-93f827c81fe8"/>
+				</reportElement>
+				<text><![CDATA[grad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="444" y="19" width="111" height="15" uuid="7529dfbb-0894-43b1-914b-2a2b383ef6dc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d13d45d0-5b27-4ed8-92fb-074a6d713065"/>
+				</reportElement>
+				<text><![CDATA[drzava]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="cb229859-ab9a-4aa3-afa2-84439642f4ee"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="111" height="15" uuid="cd0ada2f-2d85-4688-a018-5f3bbbaf48fb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="63c0bc94-27dc-48aa-8a2a-8eb28b70c9d1"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="111" y="0" width="111" height="15" uuid="842fb799-a05a-4af7-bd01-abf67d420454">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a17e2409-a7ee-45ef-9ea2-ee7bd70c2d3f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{prezime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="222" y="0" width="111" height="15" uuid="a9650c6d-959a-461b-87e9-e7b9a7c91ab9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="21e3d30f-7ee6-4cd3-9596-b8212b01cf3f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{adresa_stanovanja}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="333" y="0" width="111" height="15" uuid="ba9b46ce-c6df-443d-8427-2fd27b7f2de3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="57d11da5-b709-447f-88b9-93f827c81fe8"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{grad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="444" y="0" width="111" height="15" uuid="a9f6c9d5-a12e-472e-94ff-3aa9f652ff04">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d13d45d0-5b27-4ed8-92fb-074a6d713065"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{drzava}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="401e0e59-de38-4dd2-8257-418cb489177c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

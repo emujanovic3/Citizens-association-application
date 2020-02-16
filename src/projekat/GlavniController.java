@@ -12,6 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import net.sf.jasperreports.engine.JRException;
 
 import java.io.*;
 import java.util.*;
@@ -547,6 +548,24 @@ public class GlavniController {
     public void engleskiAction(ActionEvent actionEvent){
         Locale.setDefault(new Locale("en","US"));
         restart();
+    }
+
+    public void printajClanoveAction(ActionEvent actionEvent){
+        try {
+            new PrintReportClanovi().showReport(dao.getConn());
+        } catch (JRException e1) {
+            e1.printStackTrace();
+        }
+
+    }
+
+    public void printajProjekteAction(ActionEvent actionEvent){
+        try {
+            new PrintReportProjekti().showReport(dao.getConn());
+        } catch (JRException e1) {
+            e1.printStackTrace();
+        }
+
     }
 
     private String ucitajNaziv(){

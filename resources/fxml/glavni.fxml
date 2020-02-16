@@ -109,6 +109,12 @@
         <menus>
           <Menu mnemonicParsing="false" text="%datoteka">
             <items>
+                  <Menu mnemonicParsing="false" text="%printaj">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#printajClanoveAction" text="%clanovi" />
+                        <MenuItem mnemonicParsing="false" onAction="#printajProjekteAction" text="%projekti" />
+                    </items>
+                  </Menu>
                   <Menu mnemonicParsing="false" text="%jezik">
                     <items>
                       <MenuItem mnemonicParsing="false" onAction="#bosanskiAction" text="%bosanski" />

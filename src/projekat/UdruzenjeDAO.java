@@ -274,7 +274,7 @@ public class UdruzenjeDAO {
         }
     }
 
-    private Clan nadjiClana(int id) {
+    public Clan nadjiClana(int id) {
         try {
             nadjiClanaUpit.setInt(1,id);
             ResultSet rs = nadjiClanaUpit.executeQuery();

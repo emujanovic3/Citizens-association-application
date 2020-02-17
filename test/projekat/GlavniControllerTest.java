@@ -135,7 +135,7 @@ class GlavniControllerTest {
         robot.clickOn("#opisProjekat").write("Ovo je testni projekat");
         robot.clickOn("#dodajPBtn");
 
-        TableView projekti = robot.lookup("#projektiTableView").queryAs(TableView.class);
+        TableView<Projekat> projekti = robot.lookup("#projektiTableView").queryAs(TableView.class);
 
         assertEquals(1,projekti.getItems().size());
     }
@@ -153,7 +153,7 @@ class GlavniControllerTest {
         robot.clickOn("#opisProjekat").write("Ovo je testni projekat");
         robot.clickOn("#dodajPBtn");
 
-        TableView projekti = robot.lookup("#projektiTableView").queryAs(TableView.class);
+        TableView<Projekat> projekti = robot.lookup("#projektiTableView").queryAs(TableView.class);
 
         assertEquals(1,projekti.getItems().size());
 
@@ -168,30 +168,6 @@ class GlavniControllerTest {
         robot.clickOn(okButton);
 
         assertEquals(0,projekti.getItems().size());
-    }
-
-    @Test
-    void detaljiAction(FxRobot robot) {
-        robot.clickOn("#dodajProjekatBtn");
-
-        robot.clickOn("#nazivProjekat").write("Test projekat");
-        ChoiceBox<Projekat> vodje = robot.lookup("#projekatChoiceBox").queryAs(ChoiceBox.class);
-        robot.clickOn(vodje);
-        robot.type(KeyCode.DOWN);
-        robot.type(KeyCode.ENTER);
-
-
-        robot.clickOn("#opisProjekat").write("Ovo je testni projekat");
-        robot.clickOn("#dodajPBtn");
-
-        TableView projekti = robot.lookup("#projektiTableView").queryAs(TableView.class);
-
-        projekti.getSelectionModel().selectLast();
-        robot.clickOn("#detaljiBtn");
-
-        Label naziv = robot.lookup("#nazivLbl").queryAs(Label.class);
-
-        assertEquals("Test projekat",naziv.getText());
     }
 
     @Test

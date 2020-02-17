@@ -1,34 +1,34 @@
 
+Ysquid:S1141¤"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8®—Ï„.
+Msquid:S1125Ÿ")Remove the literal "false" boolean value.(·˜Àùÿÿÿÿ8®—Ï„.
+’"squid:ClassVariableVisibilityCheck"]Make osnivaciTableView a static final constant or non-public and provide accessors if needed.(Ö—¦8®—Ï„.
+”"squid:ClassVariableVisibilityCheck"_Make datumRodjenjaColumn a static final constant or non-public and provide accessors if needed.(å‘ñª8®—Ï„.
+Usquid:S1172H"2Remove this unused method parameter "actionEvent".(šïõëıÿÿÿÿ8®—Ï„.
+Qsquid:S1611;"3Remove the parentheses around the "event" parameter(Ú‹”à8®—Ï„.
+Gsquid:S1148¾"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8®—Ï„.
+osquid:S1192^"QDefine a constant instead of duplicating this literal "poljeNeispravno" 10 times.(»ã¬–8®—Ï„.
+msquid:S2095¸"IUse try-with-resources or close this "PrintWriter" in a "finally" clause.(´Œƒùøÿÿÿÿ8®—Ï„.
+Ssquid:S3655S"5Call "result.isPresent()" before accessing the value.(ÃÇûŞ8®—Ï„.
+usquid:S3776Z"RRefactor this method to reduce its Cognitive Complexity from 37 to the 15 allowed.(©Ñ¡ıÿÿÿÿ8®—Ï„.
+Msquid:EmptyStatementUsageCheck]"Remove this empty statement.(õ¶éİ8®—Ï„.
+Š"squid:ClassVariableVisibilityCheck""VMake sifraField a static final constant or non-public and provide accessors if needed.(å¾N8®—Ï„.
+Fsquid:S1148D"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8®—Ï„.
+Ysquid:S1141·"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8®—Ï„.
+"squid:ClassVariableVisibilityCheck"YMake prezimeColumn a static final constant or non-public and provide accessors if needed.(ïØÿ8®—Ï„.
+Msquid:EmptyStatementUsageChecko"Remove this empty statement.(ˆ‚´8®—Ï„.
+Rsquid:EmptyStatementUsageCheckx"Remove this empty statement.(çƒ€Üûÿÿÿÿ8®—Ï„.
 jsquid:S11923"LDefine a constant instead of duplicating this literal "Translation" 4 times.(“òáĞ8òÎŠÛ„.
 W
 squid:S106³"9Replace this use of System.out or System.err by a logger.(ÙœéÄ8®—Ï„.
-Ssquid:S3655S"5Call "result.isPresent()" before accessing the value.(ÃÇûŞ8®—Ï„.
-Gsquid:S1148ó"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8®—Ï„.
-msquid:S2095¸"IUse try-with-resources or close this "PrintWriter" in a "finally" clause.(´Œƒùøÿÿÿÿ8®—Ï„.
-Ssquid:EmptyStatementUsageCheck"Remove this empty statement.(ßœÎ¥ÿÿÿÿÿ8®—Ï„.
-osquid:S1192^"QDefine a constant instead of duplicating this literal "poljeNeispravno" 10 times.(»ã¬–8®—Ï„.
-Fsquid:S1148D"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8®—Ï„.
-"squid:ClassVariableVisibilityCheck"YMake sjedisteField a static final constant or non-public and provide accessors if needed.(€ıë8®—Ï„.
 ‘"squid:ClassVariableVisibilityCheck "WMake adresaField a static final constant or non-public and provide accessors if needed.(Ì€öúÿÿÿÿ8®—Ï„.
-”"squid:ClassVariableVisibilityCheck"_Make datumRodjenjaColumn a static final constant or non-public and provide accessors if needed.(å‘ñª8®—Ï„.
-’"squid:ClassVariableVisibilityCheck"]Make osnivaciTableView a static final constant or non-public and provide accessors if needed.(Ö—¦8®—Ï„.
-Ssquid:S2209Í"5Change this instance-reference to a static reference.(ˆ„ü`8®—Ï„.
-Š"squid:ClassVariableVisibilityCheck""VMake sifraField a static final constant or non-public and provide accessors if needed.(å¾N8®—Ï„.
-Ysquid:S1141¤"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8®—Ï„.
-"squid:ClassVariableVisibilityCheck"YMake prezimeColumn a static final constant or non-public and provide accessors if needed.(ïØÿ8®—Ï„.
-Msquid:EmptyStatementUsageCheckf"Remove this empty statement.(‘ôØ¢8®—Ï„.
-Ysquid:S1141·"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8®—Ï„.
-Š"squid:ClassVariableVisibilityCheck"UMake imeColumn a static final constant or non-public and provide accessors if needed.(âÙıñ8®—Ï„.
-usquid:S3776Z"RRefactor this method to reduce its Cognitive Complexity from 37 to the 15 allowed.(©Ñ¡ıÿÿÿÿ8®—Ï„.
-”"squid:ClassVariableVisibilityCheck"_Make drzavljanstvoColumn a static final constant or non-public and provide accessors if needed.(Ûá·ú8®—Ï„.
-Š"squid:ClassVariableVisibilityCheck!"UMake kImeField a static final constant or non-public and provide accessors if needed.(»Ïª8®—Ï„.
-Msquid:EmptyStatementUsageChecko"Remove this empty statement.(ˆ‚´8®—Ï„.
-Gsquid:S1148¾"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8®—Ï„.
-Msquid:EmptyStatementUsageCheck]"Remove this empty statement.(õ¶éİ8®—Ï„.
-Usquid:S1172H"2Remove this unused method parameter "actionEvent".(šïõëıÿÿÿÿ8®—Ï„.
-Qsquid:S1611;"3Remove the parentheses around the "event" parameter(Ú‹”à8®—Ï„.
-Rsquid:EmptyStatementUsageCheckx"Remove this empty statement.(çƒ€Üûÿÿÿÿ8®—Ï„.
-Psquid:S11720"2Remove this unused method parameter "actionEvent".(æÁ«¦8®—Ï„.
-"squid:ClassVariableVisibilityCheck"VMake nazivField a static final constant or non-public and provide accessors if needed.(±ä©Íûÿÿÿÿ8®—Ï„.
+Ssquid:EmptyStatementUsageCheck"Remove this empty statement.(ßœÎ¥ÿÿÿÿÿ8®—Ï„.
+"squid:ClassVariableVisibilityCheck"YMake sjedisteField a static final constant or non-public and provide accessors if needed.(€ıë8®—Ï„.
 rsquid:S1192_"ODefine a constant instead of duplicating this literal "poljeIspravno" 10 times.(ÒÖ¥ùÿÿÿÿ8®—Ï„.
-Msquid:S1125Ÿ")Remove the literal "false" boolean value.(·˜Àùÿÿÿÿ8®—Ï„.
+Š"squid:ClassVariableVisibilityCheck"UMake imeColumn a static final constant or non-public and provide accessors if needed.(âÙıñ8®—Ï„.
+"squid:ClassVariableVisibilityCheck"VMake nazivField a static final constant or non-public and provide accessors if needed.(±ä©Íûÿÿÿÿ8®—Ï„.
+Š"squid:ClassVariableVisibilityCheck!"UMake kImeField a static final constant or non-public and provide accessors if needed.(»Ïª8®—Ï„.
+”"squid:ClassVariableVisibilityCheck"_Make drzavljanstvoColumn a static final constant or non-public and provide accessors if needed.(Ûá·ú8®—Ï„.
+Gsquid:S1148ó"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8®—Ï„.
+Ssquid:S2209Í"5Change this instance-reference to a static reference.(ˆ„ü`8®—Ï„.
+Psquid:S11720"2Remove this unused method parameter "actionEvent".(æÁ«¦8®—Ï„.
+Msquid:EmptyStatementUsageCheckf"Remove this empty statement.(‘ôØ¢8®—Ï„.

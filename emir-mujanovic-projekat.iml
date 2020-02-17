@@ -30,5 +30,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="org.junit.vintage:junit-vintage-engine:5.6.0" level="project" />
+    <orderEntry type="library" name="org.testfx:testfx-junit5:4.0.15-alpha" level="project" />
   </component>
 </module>

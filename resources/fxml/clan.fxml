@@ -42,8 +42,8 @@
        <RadioButton fx:id="drugoClanRadioBtn" mnemonicParsing="false" text="%drugo" GridPane.columnIndex="2" GridPane.rowIndex="6" />
       <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="7">
         <buttons>
-          <Button mnemonicParsing="false" onAction="#dodajClanAction" text="%dodaj" />
-            <Button mnemonicParsing="false" onAction="#odustaniClanAction" text="%odustani" />
+          <Button fx:id="dodajBtn" mnemonicParsing="false" onAction="#dodajClanAction" text="%dodaj" />
+            <Button fx:id="odustaniBtn" mnemonicParsing="false" onAction="#odustaniClanAction" text="%odustani" />
         </buttons>
       </ButtonBar>
    </children>

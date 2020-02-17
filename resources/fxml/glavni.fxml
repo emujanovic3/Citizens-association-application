@@ -90,7 +90,7 @@
               <buttons>
                 <Button mnemonicParsing="false" onAction="#promijeniNazivAction" text="%promijeniNaziv" />
                   <Button mnemonicParsing="false" onAction="#ugasiUdruzenjeAction" text="%ugasiUdruzenje" />
-                  <Button mnemonicParsing="false" onAction="#izadjiAction" text="%izadji" />
+                  <Button fx:id="izadjiBtn" mnemonicParsing="false" onAction="#izadjiAction" text="%izadji" />
               </buttons>
             </ButtonBar>
             <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#slikaAction" prefHeight="128.0" prefWidth="128.0" GridPane.rowSpan="2">

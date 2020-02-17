@@ -34,8 +34,8 @@
       <TextField fx:id="nazivField" GridPane.columnIndex="1" />
        <ButtonBar GridPane.columnIndex="1" GridPane.rowIndex="1">
            <buttons>
-               <Button maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#dodajOsnivacaAction" prefWidth="110.0" text="%dodajOsnivaca" />
-               <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#brisiOsnivacaAction" text="%brisiOsnivaca" />
+               <Button fx:id="dodajOsnivacaBtn" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#dodajOsnivacaAction" prefWidth="110.0" text="%dodajOsnivaca" />
+               <Button fx:id="brisiOsnivacaBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#brisiOsnivacaAction" text="%brisiOsnivaca" />
            </buttons>
        </ButtonBar>
        <TableView fx:id="osnivaciTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
@@ -54,8 +54,8 @@
       <TextField fx:id="sifraField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
        <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="7">
            <buttons>
-               <Button mnemonicParsing="false" onAction="#napraviAction" text="%napraviUdruzenje" />
-               <Button mnemonicParsing="false" onAction="#odustaniPocetniAction" text="%odustani" />
+               <Button fx:id="napraviUdruzenjeBtn" mnemonicParsing="false" onAction="#napraviAction" text="%napraviUdruzenje" />
+               <Button fx:id="odustaniPocetni" mnemonicParsing="false" onAction="#odustaniPocetniAction" text="%odustani" />
            </buttons>
        </ButtonBar>
    </children>

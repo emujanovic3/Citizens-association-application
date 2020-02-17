@@ -26,7 +26,7 @@
         <Label text="%slikaDT" GridPane.rowIndex="4" />
         <Label text="Emir Mujanović" GridPane.columnIndex="1" />
         <Label text="Vitkovići" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-        <Label text="42.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label fx:id="csV42" text="v4.2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
         <Label text="%verzija" GridPane.rowIndex="2" />
         <Label text="https://github.com/emujanovic3/emir-mujanovic-projekat" GridPane.columnIndex="1" GridPane.rowIndex="3" />
         <Label text="Vitkovići" GridPane.columnIndex="1" GridPane.rowIndex="4" />

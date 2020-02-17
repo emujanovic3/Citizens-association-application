@@ -124,9 +124,9 @@
               <MenuItem mnemonicParsing="false" onAction="#izadjiAction" text="%zatvori" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="%pomoc">
+          <Menu fx:id="menuPomoc" mnemonicParsing="false" text="%pomoc">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#oNamaAction" text="%oNama" />
+              <MenuItem fx:id="menuONama" mnemonicParsing="false" onAction="#oNamaAction" text="%oNama" />
             </items>
           </Menu>
         </menus>

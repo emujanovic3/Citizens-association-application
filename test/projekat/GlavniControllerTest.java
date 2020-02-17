@@ -158,7 +158,7 @@ class GlavniControllerTest {
         assertEquals(1,projekti.getItems().size());
 
         projekti.getSelectionModel().selectLast();
-        robot.clickOn("obrisiProjekatBtn");
+        robot.clickOn("#obrisiProjekatBtn");
 
         robot.lookup(".dialog-pane").tryQuery().isPresent();
 

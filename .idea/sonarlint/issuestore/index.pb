@@ -91,3 +91,7 @@ S
 #test/projekat/UdruzenjeDAOTest.java,6\c\6c071cdc6deeace929df623bc3bd8942ac18695e
 X
 (test/projekat/PocetniControllerTest.java,2\0\20cdd3de98e111d0896cb810e4a19cb234baff99
+i
+9.idea/libraries/org_testfx_testfx_junit5_4_0_15_alpha.xml,a\8\a8f48de4ecfdd46bf246473730bfcac7810419aa
+W
+'test/projekat/GlavniControllerTest.java,6\3\63978735208713b41f0f9dbd25c84028d00a07b8

@@ -26,7 +26,7 @@
         <Label text="%opisDT" GridPane.rowIndex="2" />
         <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="3">
             <buttons>
-                <Button mnemonicParsing="false" onAction="#okAction" text="OK" />
+                <Button fx:id="deteljiOKBtn" mnemonicParsing="false" onAction="#okAction" text="OK" />
             </buttons>
         </ButtonBar>
       <Label fx:id="nazivLbl" text="Label" GridPane.columnIndex="1">

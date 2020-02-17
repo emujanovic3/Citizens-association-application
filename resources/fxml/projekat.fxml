@@ -28,8 +28,8 @@
       <ChoiceBox fx:id="projekatChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="3">
         <buttons>
-          <Button mnemonicParsing="false" onAction="#dodajAction" text="%dodaj" />
-            <Button mnemonicParsing="false" onAction="#odustaniAction" text="%odustani" />
+          <Button fx:id="dodajPBtn" mnemonicParsing="false" onAction="#dodajAction" text="%dodaj" />
+            <Button fx:id="odustaniPBtn" mnemonicParsing="false" onAction="#odustaniAction" text="%odustani" />
         </buttons>
       </ButtonBar>
    </children>

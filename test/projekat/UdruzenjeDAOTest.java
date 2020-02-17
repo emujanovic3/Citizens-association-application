@@ -62,33 +62,95 @@ class UdruzenjeDAOTest {
 
     @Test
     void dajSkupstinu() {
+        UdruzenjeDAO.removeInstance();
+        UdruzenjeDAO dao = UdruzenjeDAO.getInstance();
+        ArrayList<Clan> skupstina = dao.dajSkupstinu();
+        assertEquals(2,skupstina.size());
+        assertEquals("Nedim",skupstina.get(0).getIme());
+        assertEquals("Hastor",skupstina.get(0).getPrezime());
     }
 
     @Test
     void promijeniClana() {
+        UdruzenjeDAO.removeInstance();
+        UdruzenjeDAO dao = UdruzenjeDAO.getInstance();
+        ArrayList<Clan> sviClanovi = dao.dajSveClanove();
+        Clan zaPromjenu = sviClanovi.get(3);
+        zaPromjenu.setIme("Promijenjeno");
+        UdruzenjeDAO.removeInstance();
+        dao = UdruzenjeDAO.getInstance();
+        dao.promijeniClana(zaPromjenu);
+        UdruzenjeDAO.removeInstance();
+        dao = UdruzenjeDAO.getInstance();
+        sviClanovi = dao.dajSveClanove();
+        assertEquals("Promijenjeno",sviClanovi.get(3).getIme());
     }
 
     @Test
     void obrisiClana() {
+        UdruzenjeDAO.removeInstance();
+        UdruzenjeDAO dao = UdruzenjeDAO.getInstance();
+        dao.obrisiClana(4);
+        UdruzenjeDAO.removeInstance();
+        dao = UdruzenjeDAO.getInstance();
+        ArrayList<Clan> sviClanovi = dao.dajSveClanove();
+        assertEquals(3,sviClanovi.size());
     }
 
     @Test
     void dajSveProjekte() {
+        UdruzenjeDAO.removeInstance();
+        UdruzenjeDAO dao = UdruzenjeDAO.getInstance();
+        ArrayList<Projekat> sviProjekti = dao.dajSveProjekte();
+        assertEquals(2,sviProjekti.size());
     }
 
     @Test
     void promijeniProjekat() {
+        UdruzenjeDAO.removeInstance();
+        UdruzenjeDAO dao = UdruzenjeDAO.getInstance();
+        ArrayList<Projekat> sviProjekti = dao.dajSveProjekte();
+        Projekat zaPromjenu = sviProjekti.get(1);
+        zaPromjenu.setNaziv("Promijenjeno");
+        UdruzenjeDAO.removeInstance();
+        dao = UdruzenjeDAO.getInstance();
+        dao.promijeniProjekat(zaPromjenu);
+        UdruzenjeDAO.removeInstance();
+        dao = UdruzenjeDAO.getInstance();
+        sviProjekti = dao.dajSveProjekte();
+        assertEquals("Promijenjeno",sviProjekti.get(1).getNaziv());
     }
 
     @Test
     void dodajProjekat() {
+        UdruzenjeDAO.removeInstance();
+        UdruzenjeDAO dao = UdruzenjeDAO.getInstance();
+        dao.dodajProjekat(new Projekat(3,"Testni projekat",dao.nadjiClana(2),"Svrha ovog projekta je testiranje"));
+        UdruzenjeDAO.removeInstance();
+        dao = UdruzenjeDAO.getInstance();
+        ArrayList<Projekat> sviProjekti = dao.dajSveProjekte();
+        assertEquals(3,sviProjekti.size());
+
+        assertEquals("Svrha ovog projekta je testiranje",sviProjekti.get(2).getOpis());
     }
 
     @Test
     void obrisiProjekat() {
+        UdruzenjeDAO.removeInstance();
+        UdruzenjeDAO dao = UdruzenjeDAO.getInstance();
+        dao.obrisiClana(4);
+        UdruzenjeDAO.removeInstance();
+        dao = UdruzenjeDAO.getInstance();
+        ArrayList<Clan> sviClanovi = dao.dajSveClanove();
+        assertEquals(3,sviClanovi.size());
     }
 
     @Test
     void nadjiClana() {
+        UdruzenjeDAO.removeInstance();
+        UdruzenjeDAO dao = UdruzenjeDAO.getInstance();
+        Clan c = dao.nadjiClana(3);
+        assertEquals("Filip",c.getIme());
+        assertEquals(LocalDate.of(1994,5,19),c.getDatumRodjenja());
     }
 }

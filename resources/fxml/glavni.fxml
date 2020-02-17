@@ -107,26 +107,26 @@
    <top>
       <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
         <menus>
-          <Menu fx:id="menuDatoteka" mnemonicParsing="false" text="%datoteka">
+          <Menu fx:id="menuDatoteka" text="%datoteka">
             <items>
-                  <Menu mnemonicParsing="false" text="%printaj">
+                  <Menu text="%printaj">
                     <items>
-                      <MenuItem mnemonicParsing="false" onAction="#printajClanoveAction" text="%clanovi" />
-                        <MenuItem mnemonicParsing="false" onAction="#printajProjekteAction" text="%projekti" />
+                      <MenuItem onAction="#printajClanoveAction" text="%clanovi" />
+                        <MenuItem onAction="#printajProjekteAction" text="%projekti" />
                     </items>
                   </Menu>
-                  <Menu fx:id="menuJezik" mnemonicParsing="false" text="%jezik">
+                  <Menu fx:id="menuJezik" text="%jezik">
                     <items>
-                      <MenuItem fx:id="menuBosanski" mnemonicParsing="false" onAction="#bosanskiAction" text="%bosanski" />
-                        <MenuItem fx:id="menuEngleski" mnemonicParsing="false" onAction="#engleskiAction" text="%engleski" />
+                      <MenuItem fx:id="menuBosanski" onAction="#bosanskiAction" text="%bosanski" />
+                        <MenuItem fx:id="menuEngleski" onAction="#engleskiAction" text="%engleski" />
                     </items>
                   </Menu>
-              <MenuItem mnemonicParsing="false" onAction="#izadjiAction" text="%zatvori" />
+              <MenuItem onAction="#izadjiAction" text="%zatvori" />
             </items>
           </Menu>
-          <Menu fx:id="menuPomoc" mnemonicParsing="false" text="%pomoc">
+          <Menu fx:id="menuPomoc" text="%pomoc">
             <items>
-              <MenuItem fx:id="menuONama" mnemonicParsing="false" onAction="#oNamaAction" text="%oNama" />
+              <MenuItem fx:id="menuONama" onAction="#oNamaAction" text="%oNama" />
             </items>
           </Menu>
         </menus>

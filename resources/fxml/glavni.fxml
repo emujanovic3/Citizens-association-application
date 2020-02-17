@@ -45,12 +45,12 @@
             </TableView>
             <VBox prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2">
                <children>
-                  <Button fx:id="dodajClanaBtn" mnemonicParsing="false" onAction="#dodajClanaAction" prefWidth="100.0" text="%dodajClana" />
-                  <Button fx:id="obrisiClanaBtn" mnemonicParsing="false" onAction="#obrisiClanaAction" prefWidth="100.0" text="%obrisiClana" />
-                  <Button mnemonicParsing="false" onAction="#skupstinaAction" prefWidth="120.0" text="%skupstina" />
-                  <Button mnemonicParsing="false" onAction="#dodajSkupstinaAction" prefWidth="120.0" text="%dodajUSkupstinu" />
-                  <Button mnemonicParsing="false" onAction="#izbaciSkupstinaAction" prefWidth="120.0" text="%izbaciIzSkupstine" />
-                  <Button fx:id="promijeniPredsjednikaBtn" mnemonicParsing="false" onAction="#promijeniPredsjednikaAction" text="%promijeniPredsjednika" />
+                  <Button fx:id="dodajClanaBtn" mnemonicParsing="false" onAction="#dodajClanaAction" prefWidth="Infinity" text="%dodajClana" />
+                  <Button fx:id="obrisiClanaBtn" mnemonicParsing="false" onAction="#obrisiClanaAction" prefWidth="Infinity" text="%obrisiClana" />
+                  <Button mnemonicParsing="false" onAction="#skupstinaAction" prefWidth="Infinity" text="%skupstina" />
+                  <Button mnemonicParsing="false" onAction="#dodajSkupstinaAction" prefWidth="Infinity" text="%dodajUSkupstinu" />
+                  <Button mnemonicParsing="false" onAction="#izbaciSkupstinaAction" prefWidth="Infinity" text="%izbaciIzSkupstine" />
+                  <Button fx:id="promijeniPredsjednikaBtn" mnemonicParsing="false" onAction="#promijeniPredsjednikaAction" prefWidth="Infinity" text="%promijeniPredsjednika" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -77,10 +77,10 @@
             </TableView>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2">
                <children>
-                  <Button fx:id="dodajProjekatBtn" mnemonicParsing="false" onAction="#dodajProjekatAction" text="%dodajProjekat" />
-                  <Button fx:id="obrisiProjekatBtn" mnemonicParsing="false" onAction="#obrisiProjekatAction" text="%obrisiProjekat" />
-                  <Button fx:id="detaljiBtn" mnemonicParsing="false" onAction="#detaljiAction" text="%detaljiProjekta" />
-                  <Button mnemonicParsing="false" onAction="#promijeniVodjuAction" text="%promijeniVodju" />
+                  <Button fx:id="dodajProjekatBtn" mnemonicParsing="false" onAction="#dodajProjekatAction" prefWidth="Infinity" text="%dodajProjekat" />
+                  <Button fx:id="obrisiProjekatBtn" mnemonicParsing="false" onAction="#obrisiProjekatAction" prefWidth="Infinity" text="%obrisiProjekat" />
+                  <Button fx:id="detaljiBtn" mnemonicParsing="false" onAction="#detaljiAction" prefWidth="Infinity" text="%detaljiProjekta" />
+                  <Button mnemonicParsing="false" onAction="#promijeniVodjuAction" prefWidth="Infinity" text="%promijeniVodju" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

@@ -10,7 +10,7 @@
         <URL value="@/css/login.css" />
     </stylesheets>
     <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
   </columnConstraints>
   <rowConstraints>
@@ -20,9 +20,9 @@
       <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label text="%nazivDT" />
-      <Label text="%vodjaDT" GridPane.rowIndex="1" />
-      <Label text="%opisDT" GridPane.rowIndex="2" />
+      <Label prefWidth="120.0" text="%nazivDT" />
+      <Label prefWidth="120.0" text="%vodjaDT" GridPane.rowIndex="1" />
+      <Label prefWidth="120.0" text="%opisDT" GridPane.rowIndex="2" />
       <TextField fx:id="nazivProjekat" GridPane.columnIndex="1" />
       <TextArea fx:id="opisProjekat" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <ChoiceBox fx:id="projekatChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
